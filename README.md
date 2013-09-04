@@ -5,5 +5,6 @@ This repository is to hold the online assets of bianzidan.com. The contents were
 
 CONTENTS
 ==============================
-index.html ------- homepage
+index.html ------- homepage.
+
 map.html --------- map of my foot prints, with requirejs and backbone sample code
