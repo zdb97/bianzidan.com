@@ -19,6 +19,15 @@
 			"show_on_map":		"false"
         },
 		{
+            "city": 			"Canberra",
+			"lat": 				"-35.28200",
+			"lng": 				"149.12868",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2006/07",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
             "city": 			"Brisbane",
 			"lat": 				"-27.47101",
 			"lng": 				"153.02345",
