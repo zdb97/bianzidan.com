@@ -91,7 +91,7 @@ define(
 			self.collection.fetch({
 				// fetch the json url and returns the collection by (collection.parse)
 				success: function (collection, response) {
-					console.log("fetch json url： ", collection);
+					console.log("fetch json url： ", collection, " ", response);
 					
 					// add data collection to view template
 					self.addCollectionDataToTemplate();
@@ -99,6 +99,9 @@ define(
 				},
 				error: function () {
 					console.error("fetching error....");
+				},
+				complete: function (xhr, response) {
+					console.log("fetch complete: ", xhr, response);
 				}
 			});
 			

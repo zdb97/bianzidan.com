@@ -7,7 +7,7 @@ body {
 
 /*  map.html */
 body.map {
-
+	padding: 5px 0 0;
 }
 .map  #map-canvas{
 	height: 400px;	
