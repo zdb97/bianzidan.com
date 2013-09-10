@@ -51,6 +51,24 @@ define(
 			return response.places;
 		},
 		
+		fetchJSON: function (callback) {
+			var self = this;
+		
+			self.fetch({
+				// fetch the json url and returns the collection by (collection.parse)
+				success: function (self, response) {
+					console.log("fetch success: ", self, " ", response);
+				},
+				error: function () {
+					console.error("fetching error....");
+				},
+				complete: function (xhr, response) {
+					callback();
+					console.log("fetch complete: ", xhr, response);
+				}
+			});
+		},
+		
 		addModel: function () {
 		},
 		
@@ -59,7 +77,7 @@ define(
 		},
 		
 		resetModel: function () {
-			console.log("placeCollection model resetted");
+			console.log("placeCollection model re-set.");
 		}
 		
 	});
@@ -88,23 +106,11 @@ define(
 		render: function () {
 			var self = this;
 			
-			self.collection.fetch({
-				// fetch the json url and returns the collection by (collection.parse)
-				success: function (collection, response) {
-					console.log("fetch json url： ", collection, " ", response);
-					
-					// add data collection to view template
-					self.addCollectionDataToTemplate();
-					self.map.render();
-				},
-				error: function () {
-					console.error("fetching error....");
-				},
-				complete: function (xhr, response) {
-					console.log("fetch complete: ", xhr, response);
-				}
+			self.collection.fetchJSON(function() {
+				self.addCollectionDataToTemplate();
+				self.map.render();
 			});
-			
+	
 			return this;
 		},
 		
