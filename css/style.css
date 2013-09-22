@@ -1,11 +1,42 @@
-/* global */
+/* -------------------- global -------------------- */
 body {
 	
 }
+.center {
+	text-align: center;
+}
+
+/* --------------------  resume -------------------- */
+body.resume {
+	font: normal 1em/1em Cambria, Georgia, Times New Roman, Times, serif;
+}
+body.resume h1 {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+body.resume h2 {
+	font-family: Cambria, Georgia, Times New Roman, Times, serif;
+	text-transform: uppercase;
+}
+body.resume ul {
+	line-height: 1.5em;
+	margin-bottom: 0;
+}
+body.resume section {
+	padding: 10px 0;
+}
 
 
+body.resume section.key-skills ul li i {
+	color: grey;
+}
 
-/*  map.html */
+body.resume section.employment-history .role {
+	border: 1px solid #2ba6cb;
+	border-radius: 8px;
+}
+
+/* --------------------  map -------------------- */
 body.map {
 	padding: 5px 0 0;
 }
