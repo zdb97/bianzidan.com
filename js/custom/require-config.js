@@ -3,16 +3,18 @@ require.config({
 	paths: {
 		custom: "custom/",
 		lib: "lib/",
-		
+		 
 		jquery: "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min",
 		underscore: "//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min",
 		backbone: "//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min",
+		masonry: "//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.1/masonry.pkgd", 
 		async: "lib/async",
-		masonry: "lib/masonry.pkgd.min",
+		
 		/*
 		jquery: "lib/jquery-1.10.2.min",
 		underscore: "lib/underscore-min",
-		backbone: "lib/backbone-min"
+		backbone: "lib/backbone-min",
+		masonry: "lib/masonry.pkgd.min",
 		*/
 		
 		// internal js
@@ -31,7 +33,10 @@ require.config({
 		'underscore': {
 			exports: '_'
 		},
-		
+		'masonry': {
+			deps: ['jquery'],
+			exports: 'masonry'
+		}
 	}
 });
 
