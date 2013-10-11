@@ -100,21 +100,32 @@ body.resume section.employment-history .js-masonry .col3 {
 
 
 /* --------------------  map.html -------------------- */
+html#map {
+	height: 100%;
+}
+
 body.map {
 	padding: 5px 0 0;
-}
-.map  #map-canvas{
-	height: 400px;	
+	height: 100%;
 }
 
+.map .full-width {
+	max-width: 100% !important;
+}
+.map .row.map-row {
+	height: 100%;
+}
+
+.map .places {
+	height: 100%;
+}
 .map .place-list {
-	height: 400px;
+	height: 100%;
 	overflow: auto;
 }
-
 .map .place-list li {
 	display: inline-block;
-	padding: 3px 5px 12px;
+	padding: 3px 15px;
 	font-size: 75%;
 }
 .map .place-list li  a.city {
@@ -126,6 +137,9 @@ body.map {
 	text-decoration: none;
 }
 
+.map  .map-canvas{
+	height: 100%;	
+}
 .map .map-canvas .wheel {
 	position: absolute;
 	background: url(../img/loading.gif) 0 0 transparent;
@@ -138,8 +152,12 @@ body.map {
 }
 
 @media only screen and (max-width: 767px) {
-	.map  #map-canvas{
-		height: 300px;
+	.map  .map-canvas{
+	 
+	}
+	
+	.map .places {
+		 
 	}
 
 	.map .place-list {
@@ -147,8 +165,7 @@ body.map {
 	}
 	
 	.map .place-list li {
-		min-width: 125px;
-		padding: 2px 5px 3px;
+		min-width: 125px; 
 	}
 	
 	.map .place-list li.columns:last-child {
@@ -156,7 +173,7 @@ body.map {
 	}
 } 
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 499px) {
 	.map .place-list li {
 		min-width: 100px;
 	}

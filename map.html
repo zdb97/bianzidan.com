@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="map">
 
 	<head>
 		<title>Zidan Bian's map. 卞紫丹的足迹</title> 
@@ -27,7 +27,7 @@
 
 	<body class="map">
 		<!--	-->
-		<div class="row">	
+		<div class="row full-width" style="display: none;">	
 			<div class="columns large-12 small-12">
 				<input id="searchTextField" type="text" placeholder="enter a location" class="columns large-10 small-9">
 				<input type="button" value="go" class="columns large-1 small-2 radius button tiny" />
@@ -35,15 +35,15 @@
 		</div>
 			
 		
-		<div class="row">			
+		<div class="row full-width map-row">			
 		
-			<div class="columns large-2 small-12 places">
+			<div class="columns large-2 small-3 places">
 				<ul class="place-list row">
 					<!-- backbone template -->
 				</ul>
 			</div>
 			
-			<div id="map-canvas" class="map-canvas columns large-10 small-12">
+			<div id="map-canvas" class="map-canvas columns large-10 small-9">
 				<div class="wheel"></div>
 			</div> 
 		</div>
@@ -51,7 +51,7 @@
 		<script type="text/html" id="place-item">
 			<li class="large-12 small-4 columns">
 				<a href="#" class="city mapLink" index=<%=index %>><%= city %></a>
-				<div class="arrival-time">Arrival time: <%= time_of_first_arrival %></div>
+				<div class="arrival-time"><%= time_of_first_arrival %></div>
 			</li>
 		</script>
 		 
