@@ -33,8 +33,7 @@ define(
      var placeCollection = Backbone.Collection.extend({
 
         model: placeModel,
-		url: "json/map.json",	// url ralative to html page
-		
+		 
 		initialize: function () {
 			console.log('placeCollection initialized'); 
 			
@@ -56,11 +55,14 @@ define(
 		
 			self.fetch({
 				// fetch the json url and returns the collection by (collection.parse)
+				url: "json/map.json",	// url ralative to html page
+				dataType: "json",
 				success: function (self, response) {
 					console.log("fetch success: ", self, " ", response);
 				},
-				error: function () {
-					console.error("fetching error....");
+				error: function (XMLHttpRequest, textStatus, errorThrown) {
+					 console.error("Status: ", textStatus); 
+					 console.error("Error: ", errorThrown); 
 				},
 				complete: function (xhr, response) {
 					callback();

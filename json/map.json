@@ -10,15 +10,6 @@
 			"show_on_map":		"true"
         },
 		{
-            "city": 			"Melbourne",
-			"lat": 				"-37.8149",
-			"lng": 				"144.9588",
-			"country": 			"Australia",
-			"time_of_first_arrival":	"2010/09",
-			"image":			"",
-			"show_on_map":		"false"
-        },
-		{
             "city": 			"Canberra",
 			"lat": 				"-35.28200",
 			"lng": 				"149.12868",
@@ -51,6 +42,24 @@
 			"lng": 				"115.85747",
 			"country": 			"Australia",
 			"time_of_first_arrival":	"2009/12",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+            "city": 			"Melbourne",
+			"lat": 				"-37.8149",
+			"lng": 				"144.9588",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2010/09",
+			"image":			"",
+			"show_on_map":		"false"
+        },  
+		{
+            "city": 			"Adelaide",
+			"lat": 				"-34.92862",
+			"lng": 				"138.59996",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2013/10",
 			"image":			"",
 			"show_on_map":		"false"
         },
