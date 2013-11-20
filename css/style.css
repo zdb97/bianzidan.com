@@ -85,14 +85,24 @@ body.resume section.employment-history .projects  > li  {
 body.resume section.employment-history .js-masonry .col3 {
 	width: 98%;
 }
+body.resume section.employment-history ol.inner-list li {
+	width: 31%;
+	display: inline-block;
+}
 
 @media screen and (max-width: 767px) {
 	body.resume section.employment-history .js-masonry li { 
 		width: 45%;
 	}
+	body.resume section.employment-history ol.inner-list li {
+		width: 45%;
+	}
 }
 @media screen and (max-width: 479px) {
 	body.resume section.employment-history .js-masonry li { 
+		width: 98%;
+	}
+	body.resume section.employment-history ol.inner-list li {
 		width: 98%;
 	}
 }

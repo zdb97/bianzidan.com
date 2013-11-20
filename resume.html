@@ -13,7 +13,7 @@
 		<!-- custom foundation package: grid/typography/buttons -->
 		<link href="css/foundation.min.css" rel="stylesheet"> 
 		<link href="css/normalize.css" rel="stylesheet"> 
-		<link href="css/style.css?v=2" rel="stylesheet"> 
+		<link href="css/style.css?v=3.2" rel="stylesheet"> 
 		<!-- 
 		<script src="js/lib/require.js"></script> 	
 		<script>
@@ -25,18 +25,23 @@
 		</script>
 		-->
 		
-		<!--	-->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+		<!--	
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script> 
+		<script src="js/lib/jquery-1.10.2.min.js" type="text/javascript"></script>
+		-->
 		<script src="js/lib/masonry.pkgd.min.js" type="text/javascript"></script>
 		
 		<script>
-			$(function () {
-				var $container = $('.js-masonry');
+		/*
+			 window.onload = function () {
+				//var $container = $('.js-masonry');
+				var $container = document.getElementsByClassName('js-masonry'); 
 				$container.masonry({
 					itemSelector: 'li',
 					isAnimated: true
 				});  
-			});
+			 }
+			 */
 		</script>
 	
 	</head>
@@ -67,6 +72,7 @@
 					<li>
 						Proven capacity to deliver quality web solutions: (selected projects) 
 						<ol>
+							<li>Rebuild <a href="//optus.com.au/" target="_blank">Optus.com.au</a><i>(Optus)</i>.</li>
 							<li>Rebuilt of <a href="//optus.com.au/?mobileSite=true" target="_blank">Optus mobile website</a> <i>(Optus)</i>.</li>
 							<li>Responsive e-commerce site: <a href="//sportscraft.com.au" target="_blank">sportscraft.com.au</a> <i>(Amblique)</i>.</li>
 							<li>Channel 9’s flagship websites such as <a href="//thevoice.com.au" target="_blank">thevoice.com.au</a> <i>(ninemsn)</i>.</li>
@@ -109,26 +115,30 @@
 							<li class="col3">
 								<div>Key technologies/framework used:</div>
 								<br/>
-								<div>Responsive web design framework: <a href="//foundation.zurb.com/" target="_blank">Zurb Fondation.</a></div>
-								<div>Advanced OO JavaScript in MV* pattern: using <a href="//backbonejs.org/" target="_blank">backbone.js</a> and <a href="//angularjs.org/" target="_blank">angular.js</a>.</div>
-								<div>JS modular loading using <a href="//requirejs.org" target="_blank">require.js</a>.</div>
-								<div>
-									<a href="//gruntjs.com/" target="_blank">Grunt.js</a> for front-end CSS/JS assets pre-processing and management:
-								</div>
-								<div>FreeMarker(FTL) and JSP to build frontend template.</div>
-								<div><a href="//pivotal.github.io/jasmine/" target="_blank">Jasmine.js</a> for automated testing with <a href="//gotwarlost.github.io/istanbul/" target="_blank">Istanbul.js</a> for code coverage. </div>
-								<div>Continuous integration using <a href="//jenkins-ci.org/" target="_blank">Jenkins</a></div>
-								<div>Semantic HTML with focus on web accessibidivty.</div>
-								<div>SOA, XML/JSON (REST)/SOAP</div>
-								<div>Git</div>
+								<ol class="inner-list">
+									<li>Responsive web design framework: <a href="//foundation.zurb.com/" target="_blank">Zurb Fondation.</a></li>
+									<li>Advanced OO JavaScript in MV* pattern: using <a href="//backbonejs.org/" target="_blank">backbone.js</a> and <a href="//angularjs.org/" target="_blank">angular.js</a>.</li>
+									<li>JS modular loading using <a href="//requirejs.org" target="_blank">require.js</a>.</li>
+									<li><a href="//gruntjs.com/" target="_blank">Grunt.js</a> for front-end CSS/JS and other assets pre-processing and management.</li>
+									<li>CSS3/SCSS/COMPASS</li>
+									<li>FreeMarker(FTL) and JSP to build frontend template.</li>
+									<li><a href="//pivotal.github.io/jasmine/" target="_blank">Jasmine.js</a> for automated testing with <a href="//gotwarlost.github.io/istanbul/" target="_blank">Istanbul.js</a> for code coverage. </li>
+									<li>Continuous integration using <a href="//jenkins-ci.org/" target="_blank">Jenkins</a></li>
+									<li>Modernizr.js</li> 
+									<li>Cucumber</li>
+									<li>Sonar</li>
+									<li>Semantic HTML with focus on web accessibidivty.</li>
+									<li>SOA, XML/JSON (REST)/SOAP</li>
+									<li>Git</li>
+								</ol> 
 							</li>
 						</ul> 
 					</li>
 					<li class="large-12 small-12 columns">
 						<h6>Selected projects:</h6>
 						<ul class="projects js-masonry">
+							<li>Rebuild <a href="//optus.com.au/" target="_blank">Optus.com.au</a></li>
 							<li><a href="//optus.com.au/?mobileSite=true" target="_blank">Optus mobile site</a> rebuild</li>
-							<li>Rebuild of optus.com.au (in progress)</li>
 						</ul>
 					</li>
 				</ul>
