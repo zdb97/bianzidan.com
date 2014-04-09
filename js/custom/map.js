@@ -19,7 +19,8 @@ define(
 			country:	"",
 			image: 	"",
 			index: "",
-			show_on_map: ""
+			show_on_map: "",
+			zoom: ""
 		},
 		
 		initialize: function () {
@@ -33,7 +34,8 @@ define(
      var placeCollection = Backbone.Collection.extend({
 
         model: placeModel,
-		 
+		url: "json/map.json",	// url ralative to html page
+		
 		initialize: function () {
 			console.log('placeCollection initialized'); 
 			
@@ -55,14 +57,11 @@ define(
 		
 			self.fetch({
 				// fetch the json url and returns the collection by (collection.parse)
-				url: "json/map.json",	// url ralative to html page
-				dataType: "json",
 				success: function (self, response) {
 					console.log("fetch success: ", self, " ", response);
 				},
-				error: function (XMLHttpRequest, textStatus, errorThrown) {
-					 console.error("Status: ", textStatus); 
-					 console.error("Error: ", errorThrown); 
+				error: function () {
+					console.error("fetching error....");
 				},
 				complete: function (xhr, response) {
 					callback();
@@ -143,8 +142,10 @@ define(
 		},
 		
 		updateModels: function (currentDisplayModel, clickModel) {
-			clickModel.set("show_on_map", "true");
-			currentDisplayModel.set("show_on_map", "false");
+			if (clickModel !== currentDisplayModel) {
+				currentDisplayModel.set("show_on_map", "false");
+				clickModel.set("show_on_map", "true");
+			}
 		},
 		
 		listItemClick: function (e) {
@@ -164,7 +165,7 @@ define(
 		map: null,
 		
 		//constant
-		ZOOM: 12,
+		DEFAULT_ZOOM: 12,
 		
 		initialize: function (options) {	
 			console.log("map view initialized."); 
@@ -177,10 +178,11 @@ define(
 		render: function () { //console.log('render');
 			var currentDisplayModel = this.getDisplayModel();
 			var myPosition = new google.maps.LatLng(parseFloat(currentDisplayModel.toJSON().lat), parseFloat(currentDisplayModel.toJSON().lng));
+			var zoom = currentDisplayModel.toJSON().zoom == "" ? this.DEFAULT_ZOOM : currentDisplayModel.toJSON().zoom; //this.ZOOM,
 			
 			var mapOptions = {
 				center: myPosition,
-				zoom: this.ZOOM,
+				zoom: parseInt(zoom), 
 				mapTypeId: google.maps.MapTypeId.ROADMAP
 			  };
 			
