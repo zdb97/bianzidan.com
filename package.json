@@ -1,0 +1,25 @@
+{
+  "name": "bianzidan.com",
+  "version": "0.1.0",
+  "description": "--------\r --------\r This repository is to hold the online assets of bianzidan.com. The contents were originally hosted at my other repository. I moved them here where I think it's more appropriate and manageable.",
+  "main": "index.html",
+  "scripts": {
+    "test": "grunt dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "bianzidan.com"
+  },
+  "keywords": [
+    "bianzidan"
+  ],
+  "author": "bianzidan",
+  "license": "1.9",
+  "gitHead": "cf09ac2e49367ccafe1748eda5d24fdf859c9a1e",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-compass": "~0.7.2"
+  }
+}

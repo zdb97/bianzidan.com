@@ -1,14 +1,41 @@
 /* -------------------- global -------------------- */
-body {
-	
+@font-face
+{
+	font-family: Amble-Regular;
+	src: url(../font/Amble-Regular.ttf);
+}
+@font-face
+{
+	font-family: Amble-Light;
+	src: url(../font/Amble-Light.ttf);
+}
+@font-face
+{
+	font-family: Amble-LightCondensed;
+	src: url(../font/Amble-LightCondensed.ttf);
+}
+
+
+body, ul, ol, dl {
+	font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
 }
 .center {
 	text-align: center;
 }
+a { 
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+/* --------------------  index -------------------- */
+body.bodyHome { 
+} 
 
 /* --------------------  resume.html -------------------- */
 body.resume {
-	font: normal 1em/1em Cambria, Georgia, Times New Roman, Times, serif;
+	font: normal 1em/1em  Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
 }
 body.resume h1, body.resume h2, body.resume h3, body.resume h4, body.resume h5, body.resume h6{
 		font-family: Cambria, Georgia, Times New Roman, Times, serif;
@@ -115,7 +142,7 @@ html#map {
 }
 
 body.map {
-	padding: 5px 0 0;
+	padding: 0;
 	height: 100%;
 }
 
@@ -141,11 +168,8 @@ body.map {
 .map .place-list li  a.city {
 	font-weight: 700;
 	text-transform: uppercase;
-	text-decoration: underline;
 }
-.map .place-list li  a.city:hover {
-	text-decoration: none;
-}
+.map .place-list li  a.city:hover { }
 
 .map  .map-canvas{
 	height: 100%;	
@@ -159,6 +183,12 @@ body.map {
 	left: 50%;
 	margin-top: -103px;
 	margin-left: -103px;
+}
+
+@media only screen and (max-width: 639px) {
+	.map .places {
+		top: 55px;
+	}
 }
 
 @media only screen and (max-width: 767px) {
