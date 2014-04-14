@@ -43,18 +43,18 @@ a:hover { text-decoration: none; }
 /* line 64, ../scss/_responsive-nav.scss */
 .nav-toggle { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; width: 70px; height: 55px; float: right; text-indent: -9999px; overflow: hidden; display: block; background: dodgerblue url("../img/hamburger.gif") no-repeat 50% 33%; }
 
-@media screen and (max-width: 40.063rem) { /* line 84, ../scss/_responsive-nav.scss */
+@media screen and (min-width: 40.063rem) { /* line 84, ../scss/_responsive-nav.scss */
   .js .nav-collapse { position: relative; }
   /* line 87, ../scss/_responsive-nav.scss */
   .js .nav-collapse.closed { max-height: none; }
-  /* line 94, ../scss/_responsive-nav.scss */
+  /* line 93, ../scss/_responsive-nav.scss */
   .nav-toggle { display: none; }
   /* line 97, ../scss/_responsive-nav.scss */
-  .nav-toggle li { float: none; display: inline-block; width: auto; margin-left: .4em; margin-right: .2em; }
+  .nav-collapse li { float: none; display: inline-block; width: auto; margin-left: .4em; margin-right: .2em; }
   /* line 105, ../scss/_responsive-nav.scss */
-  .nav-toggle li.active a { -webkit-font-smoothing: subpixel-antialiased; color: white; background: dodgerblue; }
+  .nav-collapse li.active a { -webkit-font-smoothing: subpixel-antialiased; color: white; background: dodgerblue; }
   /* line 112, ../scss/_responsive-nav.scss */
-  .nav-toggle li a { _float: none; -webkit-font-smoothing: antialiased; margin: 0; padding: 1.96em .7em .5em; background: transparent; color: #37302a; border: 0; -webkit-transition: background .5s ease; -moz-transition: background .5s ease; -o-transition: background .5s ease; transition: background .5s ease; font: normal 1rem/1rem inherit; } }
+  .nav-collapse li a { _float: none; -webkit-font-smoothing: antialiased; margin: 0; padding: 1.96em .7em .5em; background: transparent; color: #37302a; border: 0; -webkit-transition: background .5s ease; -moz-transition: background .5s ease; -o-transition: background .5s ease; transition: background .5s ease; font: normal 1rem/1rem inherit; } }
 /*
 .nav-collapse ul { } 
 .nav-collapse li { } 
