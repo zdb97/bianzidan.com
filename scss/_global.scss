@@ -1,0 +1,17 @@
+body, ul, ol, dl {
+	font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
+}
+
+.center {
+	text-align: center;
+}
+
+a { 
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+

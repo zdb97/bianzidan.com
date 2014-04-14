@@ -8,13 +8,18 @@ module.exports = function(grunt) {
 		  options: {              // Target options
 			sassDir: 'scss',
 			cssDir: 'css',
-			environment: 'production'
+			environment: 'production',
+			outputStyle: 'compressed',
+			noLineComments: true
 		  }
 		},
 		dev: {                    // Another target
 		  options: {
 			sassDir: 'scss',
-			cssDir: 'css'
+			cssDir: 'css',
+			environment: 'development',
+			outputStyle: 'compact',
+			noLineComments: false
 		  }
 		}
 	  }

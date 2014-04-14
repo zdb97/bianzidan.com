@@ -1,0 +1,214 @@
+/******************************************************************************* Imports
+*******************************************************************************/
+/*****************variables*****************/
+/* line 1, ../scss/_global.scss */
+body, ul, ol, dl { font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif; }
+
+/* line 5, ../scss/_global.scss */
+.center { text-align: center; }
+
+/* line 9, ../scss/_global.scss */
+a { text-decoration: underline; }
+/* line 12, ../scss/_global.scss */
+a:hover { text-decoration: none; }
+
+@font-face { font-family: Amble-Regular; src: url(../font/Amble-Regular.ttf); }
+
+@font-face { font-family: Amble-Light; src: url(../font/Amble-Light.ttf); }
+
+@font-face { font-family: Amble-LightCondensed; src: url(../font/Amble-LightCondensed.ttf); }
+
+/*! responsive-nav.js 1.0.32 by @viljamis */
+/* line 5, ../scss/_responsive-nav.scss */
+.nav-collapse { width: 100%; }
+/* line 8, ../scss/_responsive-nav.scss */
+.nav-collapse.opened { max-height: 9999px; }
+/* line 12, ../scss/_responsive-nav.scss */
+.nav-collapse ul { margin: 0; padding: 0; width: 100%; display: block; list-style: none; float: left; }
+/* line 20, ../scss/_responsive-nav.scss */
+.nav-collapse li { width: 100%; display: block; float: left; }
+/* line 26, ../scss/_responsive-nav.scss */
+.nav-collapse li.active a { color: gold !important; }
+/* line 30, ../scss/_responsive-nav.scss */
+.nav-collapse li a { text-transform: uppercase; font-weight: 400; letter-spacing: 2px; color: white; text-decoration: none; width: 100%; background: dodgerblue; border-bottom: 1px solid white; padding: .5rem 1rem; float: left; }
+/* line 42, ../scss/_responsive-nav.scss */
+.nav-collapse li a:hover, .nav-collapse li a:focus, .nav-collapse li a:active { color: gold !important; }
+
+/* line 50, ../scss/_responsive-nav.scss */
+.js .nav-collapse { clip: rect(0 0 0 0); max-height: 0; position: absolute; display: block; overflow: hidden; zoom: 1; }
+
+/* line 60, ../scss/_responsive-nav.scss */
+.disable-pointer-events { pointer-events: none !important; }
+
+/* line 64, ../scss/_responsive-nav.scss */
+.nav-toggle { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; width: 70px; height: 55px; float: right; text-indent: -9999px; overflow: hidden; display: block; background: dodgerblue url("../img/hamburger.gif") no-repeat 50% 33%; }
+
+@media screen and (max-width: 40.063rem) { /* line 84, ../scss/_responsive-nav.scss */
+  .js .nav-collapse { position: relative; }
+  /* line 87, ../scss/_responsive-nav.scss */
+  .js .nav-collapse.closed { max-height: none; }
+  /* line 94, ../scss/_responsive-nav.scss */
+  .nav-toggle { display: none; }
+  /* line 97, ../scss/_responsive-nav.scss */
+  .nav-toggle li { float: none; display: inline-block; width: auto; margin-left: .4em; margin-right: .2em; }
+  /* line 105, ../scss/_responsive-nav.scss */
+  .nav-toggle li.active a { -webkit-font-smoothing: subpixel-antialiased; color: white; background: dodgerblue; }
+  /* line 112, ../scss/_responsive-nav.scss */
+  .nav-toggle li a { _float: none; -webkit-font-smoothing: antialiased; margin: 0; padding: 1.96em .7em .5em; background: transparent; color: #37302a; border: 0; -webkit-transition: background .5s ease; -moz-transition: background .5s ease; -o-transition: background .5s ease; transition: background .5s ease; font: normal 1rem/1rem inherit; } }
+/*
+.nav-collapse ul { } 
+.nav-collapse li { } 
+.nav-collapse  li a { }
+.nav-collapse  li a:hover, 
+.nav-collapse  li a:focus, 
+.nav-collapse  li a:active,
+.nav-collapse  li.active a { }
+
+.js .nav-collapse { } 
+
+.nav-collapse.opened { } 
+.disable-pointer-events { } 
+
+.nav-toggle { }
+
+@media screen and (min-width: 40em) {
+	.js .nav-collapse {	}
+	.js .nav-collapse.closed { }
+	.nav-toggle { } 
+	.nav-collapse  li { }  
+	.nav-collapse  li a { }
+	.nav-collapse  li.active a { }  
+}
+*/
+/* line 4, ../scss/_resume.scss */
+.bodyResume h1, .bodyResume h2, .bodyResume h3, .bodyResume h4, .bodyResume h5, .bodyResume h6 { font-family: Cambria, Georgia, Times New Roman, Times, serif; text-transform: uppercase; }
+
+/* line 8, ../scss/_resume.scss */
+.bodyResume h1 { margin-bottom: 0; margin-top: 0; }
+
+/* line 12, ../scss/_resume.scss */
+.bodyResume h6 { text-transform: uppercase; font-size: 0.75em; font-weight: 400; }
+
+/* line 17, ../scss/_resume.scss */
+.bodyResume ul { line-height: 1.5em; margin-bottom: 0; }
+
+/* line 21, ../scss/_resume.scss */
+.bodyResume ul li { list-style: none; }
+
+/* line 24, ../scss/_resume.scss */
+.bodyResume hr { margin: 0.5em 0; }
+
+/* line 27, ../scss/_resume.scss */
+.bodyResume i { color: grey; }
+
+/* line 31, ../scss/_resume.scss */
+.bodyResume section { padding: 10px 0; }
+
+/* line 35, ../scss/_resume.scss */
+.bodyResume section.heading a { display: block; }
+
+/* line 39, ../scss/_resume.scss */
+.bodyResume section.key-skills ul { margin: 0 0 0 0.9375em; }
+
+/* line 42, ../scss/_resume.scss */
+.bodyResume section.key-skills ul li { list-style: disc; }
+
+/* line 45, ../scss/_resume.scss */
+.bodyResume section.key-skills ol li { list-style-type: square; }
+
+/* line 49, ../scss/_resume.scss */
+.bodyResume section.employment-history .role { padding: 0 0.9375em 15px; margin: 0 0 15px; }
+
+/* line 54, ../scss/_resume.scss */
+.bodyResume section.employment-history .duration, .bodyResume section.employment-history .title { font-weight: 700; text-transform: uppercase; }
+
+/* line 59, ../scss/_resume.scss */
+.bodyResume section.employment-history .js-masonry { margin-left: 0; }
+
+/* line 62, ../scss/_resume.scss */
+.bodyResume section.employment-history .js-masonry li { width: 32%; line-height: 1.25em; border: 1px solid #2ba6cb; padding: 5px 10px; border-radius: 8px; list-style: none; margin: 5px; word-wrap: break-word; }
+
+/* line 73, ../scss/_resume.scss */
+.bodyResume section.employment-history .responsibilities > li, .bodyResume section.employment-history .projects > li { font-size: 0.75em; }
+
+/* line 76, ../scss/_resume.scss */
+.bodyResume section.employment-history .js-masonry .col3 { width: 98%; }
+
+/* line 79, ../scss/_resume.scss */
+.bodyResume section.employment-history ol.inner-list li { width: 31%; display: inline-block; }
+
+@media screen and (max-width: 767px) { /* line 85, ../scss/_resume.scss */
+  .bodyResume section.employment-history .js-masonry li { width: 45%; }
+  /* line 88, ../scss/_resume.scss */
+  .bodyResume section.employment-history ol.inner-list li { width: 45%; } }
+@media screen and (max-width: 479px) { /* line 93, ../scss/_resume.scss */
+  .bodyResume section.employment-history .js-masonry li { width: 98%; }
+  /* line 96, ../scss/_resume.scss */
+  .bodyResume section.employment-history ol.inner-list li { width: 98%; } }
+/* line 1, ../scss/_map.scss */
+html#map { height: 100%; }
+
+/* line 5, ../scss/_map.scss */
+.bodyMap { padding: 5px 0 0; height: 100%; }
+/* line 9, ../scss/_map.scss */
+.bodyMap .full-width { max-width: 100% !important; }
+/* line 13, ../scss/_map.scss */
+.bodyMap .row.map-row { height: 100%; }
+/* line 17, ../scss/_map.scss */
+.bodyMap .places { height: 100%; }
+/* line 20, ../scss/_map.scss */
+.bodyMap .place-list { height: 100%; overflow: auto; }
+/* line 24, ../scss/_map.scss */
+.bodyMap .place-list li { display: inline-block; padding: 3px 15px; font-size: 75%; }
+/* line 30, ../scss/_map.scss */
+.bodyMap .place-list li a.city { font-weight: 700; text-transform: uppercase; text-decoration: underline; }
+/* line 35, ../scss/_map.scss */
+.bodyMap .place-list li a.city:hover { text-decoration: none; }
+/* line 43, ../scss/_map.scss */
+.bodyMap .map-canvas { height: 100%; }
+/* line 46, ../scss/_map.scss */
+.bodyMap .map-canvas .wheel { position: absolute; background: url(../img/loading.gif) 0 0 transparent; height: 207px; width: 207px; top: 50%; left: 50%; margin-top: -103px; margin-left: -103px; }
+
+@media only screen and (min-width: 64.063rem) { /* line 62, ../scss/_map.scss */
+  .bodyMap .place-list { height: auto; }
+  /* line 65, ../scss/_map.scss */
+  .bodyMap .place-list li { min-width: 125px; }
+  /* line 69, ../scss/_map.scss */
+  .bodyMap .place-list li.columns :last-child { float: left; } }
+@media only screen and (min-width: 40.063rem) { /* line 81, ../scss/_map.scss */
+  .bodyMap .place-list li { min-width: 100px; }
+  /* line 84, ../scss/_map.scss */
+  .bodyMap .place-list li .arrival-time { display: none; } }
+/*
+body.map { }
+
+.map .full-width { }
+.map .row.map-row { }
+
+.map .places { }
+.map .place-list { } 
+.map .place-list li { }
+.map .place-list li  a.city { }
+.map .place-list li  a.city:hover { }
+
+.map  .map-canvas{ }
+.map .map-canvas .wheel { }
+
+@media only screen and (max-width: 767px) {
+	.map  .map-canvas{ }
+	
+	.map .places { }
+
+	.map .place-list { }
+	
+	.map .place-list li { }
+	
+	.map .place-list li.columns:last-child { }
+} 
+
+@media only screen and (max-width: 499px) {
+	.map .place-list li { }
+	
+	.map .place-list li .arrival-time { }
+}
+*/
