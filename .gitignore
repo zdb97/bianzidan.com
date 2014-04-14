@@ -1,0 +1,91 @@
+###############
+# Build files #
+###############
+bin
+*.gem
+static
+
+ 
+########
+# Node #
+########
+node_modules
+
+########
+# Ruby #
+########
+Gemfile.lock
+
+####################
+# grunt temp files #
+####################
+.grunt
+ 
+####################
+# Windows OS stuff #
+####################
+Thumbs.db
+Desktop.ini
+
+####################
+# MAC OS stuff #
+####################
+.DS_Store
+ 
+####################
+# Etc/Text Editors #
+####################
+*.bak
+*.lnk
+*.tmp
+*.marks
+.project
+*.project
+*.classpath
+*.iml
+*.marks
+.idea/*
+.metadata/*
+.settings/*
+.externalToolBuilders/*
+*~
+# Ignore Sublime editor config files
+*.sublime-workspace
+*.sublime-project
+# ignore "sublime text 2" temp files
+*#
+
+########################
+# Tomcat related files #
+########################
+# ignore META-INF folder
+META-INF/
+
+
+#########################################
+# More custom linux editor ignore rules #
+#########################################
+# /home/cb/.gitignore-boilerplates/Global/Emacs.gitignore
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+
+#########################################
+# CSS                                   #
+#########################################
+css
+
+#########################################
+# SCSS CACHE                            #
+#########################################
+.sass-cache

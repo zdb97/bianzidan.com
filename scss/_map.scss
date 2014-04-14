@@ -1,0 +1,125 @@
+html#map {
+	height: 100%;
+}
+
+.bodyMap {
+	padding: 5px 0 0;
+	height: 100%;
+
+	.full-width {
+		max-width: 100% !important;
+	}
+	.row {
+		&.map-row {
+			height: 100%;	
+		}
+	}
+	.places {
+		height: 100%;
+	}
+	.place-list {
+		height: 100%;
+		overflow: auto;
+
+		li {
+			display: inline-block;
+			padding: 3px 15px;
+			font-size: 75%;
+
+			a {
+				&.city {
+					font-weight: 700;
+					text-transform: uppercase;
+					text-decoration: underline;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	.map-canvas{
+		height: 100%;	
+
+		.wheel {
+			position: absolute;
+			background: url(../img/loading.gif) 0 0 transparent;
+			height: 207px;
+			width: 207px;
+			top: 50%;
+			left: 50%;
+			margin-top: -103px;
+			margin-left: -103px;
+		}
+
+	}
+}
+ 
+@media only screen and (min-width: 64.063rem) {	// 1024px
+	.bodyMap {
+		.place-list {
+			height: auto;
+
+		 	li {
+				min-width: 125px; 
+
+				&.columns {
+					:last-child {
+						float: left;
+					}
+				}
+			}
+		}
+	}
+} 
+
+@media only screen and (min-width: 40.063rem) {	// 640px
+	.bodyMap { 
+		.place-list {
+			li {
+				min-width: 100px;
+
+				.arrival-time {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+body.map { }
+
+.map .full-width { }
+.map .row.map-row { }
+
+.map .places { }
+.map .place-list { } 
+.map .place-list li { }
+.map .place-list li  a.city { }
+.map .place-list li  a.city:hover { }
+
+.map  .map-canvas{ }
+.map .map-canvas .wheel { }
+
+@media only screen and (max-width: 767px) {
+	.map  .map-canvas{ }
+	
+	.map .places { }
+
+	.map .place-list { }
+	
+	.map .place-list li { }
+	
+	.map .place-list li.columns:last-child { }
+} 
+
+@media only screen and (max-width: 499px) {
+	.map .place-list li { }
+	
+	.map .place-list li .arrival-time { }
+}
+*/

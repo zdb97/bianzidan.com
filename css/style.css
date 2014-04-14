@@ -1,0 +1,225 @@
+/* -------------------- global -------------------- */
+@font-face
+{
+	font-family: Amble-Regular;
+	src: url(../font/Amble-Regular.ttf);
+}
+@font-face
+{
+	font-family: Amble-Light;
+	src: url(../font/Amble-Light.ttf);
+}
+@font-face
+{
+	font-family: Amble-LightCondensed;
+	src: url(../font/Amble-LightCondensed.ttf);
+}
+
+
+body, ul, ol, dl {
+	font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
+}
+.center {
+	text-align: center;
+}
+a { 
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+/* --------------------  index -------------------- */
+body.bodyHome { 
+} 
+
+/* --------------------  resume.html -------------------- */
+body.resume {
+	font: normal 1em/1em  Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
+}
+body.resume h1, body.resume h2, body.resume h3, body.resume h4, body.resume h5, body.resume h6{
+		font-family: Cambria, Georgia, Times New Roman, Times, serif;
+		text-transform: uppercase; 
+} 
+body.resume h1 {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+body.resume h6 {
+	text-transform: uppercase;
+	font-size: 0.75em;
+	font-weight: 400;
+}
+body.resume ul {
+	line-height: 1.5em;
+	margin-bottom: 0;
+}
+body.resume ul li { 
+	list-style: none;
+}
+body.resume hr {
+	margin: 0.5em 0;
+}
+body.resume i {
+	color: grey;
+}
+
+body.resume section {
+	padding: 10px 0;
+}
+
+body.resume  section.heading a{
+	display: block;
+}
+
+body.resume  section.key-skills ul  {
+	margin: 0 0 0 0.9375em;
+}
+body.resume  section.key-skills ul li{
+	list-style: disc;
+}
+body.resume  section.key-skills ol li {
+	list-style-type: square; 
+}
+
+body.resume section.employment-history .role {
+	padding: 0 0.9375em 15px;
+	margin: 0 0 15px; 
+}
+body.resume section.employment-history  .duration,
+body.resume section.employment-history  .title  {
+	font-weight: 700;
+	text-transform: uppercase;
+} 
+
+body.resume section.employment-history .js-masonry {
+	margin-left: 0;
+}
+body.resume section.employment-history .js-masonry li {
+	width: 32%; 
+	line-height: 1.25em;
+	border: 1px solid #2ba6cb;
+	padding: 5px 10px;
+	border-radius: 8px; 
+	list-style: none;
+	margin: 5px;
+	word-wrap: break-word;
+}
+body.resume section.employment-history .responsibilities  > li,
+body.resume section.employment-history .projects  > li  {
+	font-size: 0.75em;
+}
+body.resume section.employment-history .js-masonry .col3 {
+	width: 98%;
+}
+body.resume section.employment-history ol.inner-list li {
+	width: 31%;
+	display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+	body.resume section.employment-history .js-masonry li { 
+		width: 45%;
+	}
+	body.resume section.employment-history ol.inner-list li {
+		width: 45%;
+	}
+}
+@media screen and (max-width: 479px) {
+	body.resume section.employment-history .js-masonry li { 
+		width: 98%;
+	}
+	body.resume section.employment-history ol.inner-list li {
+		width: 98%;
+	}
+}
+
+
+
+/* --------------------  map.html -------------------- */
+html#map {
+	height: 100%;
+}
+
+body.map {
+	padding: 0;
+	height: 100%;
+}
+
+.map .full-width {
+	max-width: 100% !important;
+}
+.map .row.map-row {
+	height: 100%;
+}
+
+.map .places {
+	height: 100%;
+}
+.map .place-list {
+	height: 100%;
+	overflow: auto;
+}
+.map .place-list li {
+	display: inline-block;
+	padding: 3px 15px;
+	font-size: 75%;
+}
+.map .place-list li  a.city {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.map .place-list li  a.city:hover { }
+
+.map  .map-canvas{
+	height: 100%;	
+}
+.map .map-canvas .wheel {
+	position: absolute;
+	background: url(../img/loading.gif) 0 0 transparent;
+	height: 207px;
+	width: 207px;
+	top: 50%;
+	left: 50%;
+	margin-top: -103px;
+	margin-left: -103px;
+}
+
+@media only screen and (max-width: 639px) {
+	.map .places {
+		top: 55px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.map  .map-canvas{
+	 
+	}
+	
+	.map .places {
+		 
+	}
+
+	.map .place-list {
+		height: auto;
+	}
+	
+	.map .place-list li {
+		min-width: 125px; 
+	}
+	
+	.map .place-list li.columns:last-child {
+		float: left;
+	}
+} 
+
+@media only screen and (max-width: 499px) {
+	.map .place-list li {
+		min-width: 100px;
+	}
+	
+	.map .place-list li .arrival-time {
+		display: none;
+	}
+}
+
