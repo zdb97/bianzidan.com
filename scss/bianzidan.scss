@@ -1,8 +1,10 @@
-/*******************************************************************************
-    Imports
-*******************************************************************************/
+// Comment out this import if you don't want to use normalize
+@import "normalize";
 
-/*****************variables*****************/
+// Comment out this import if  customizing the imports below
+@import "foundation";
+//@import "foundation/variables";
+//@import "foundation/components/inline-lists";
 
 @import "global";
 @import "font";

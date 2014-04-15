@@ -1,100 +1,138 @@
 .bodyResume {
-	
-}
-.bodyResume h1, .bodyResume h2, .bodyResume h3, .bodyResume h4, .bodyResume h5, .bodyResume h6{
+	h1, h2, h3, h4, h5, h6 {
 		font-family: Cambria, Georgia, Times New Roman, Times, serif;
 		text-transform: uppercase; 
-} 
-.bodyResume h1 {
-	margin-bottom: 0;
-	margin-top: 0;
-}
-.bodyResume h6 {
-	text-transform: uppercase;
-	font-size: 0.75em;
-	font-weight: 400;
-}
-.bodyResume ul {
-	line-height: 1.5em;
-	margin-bottom: 0;
-}
-.bodyResume ul li { 
-	list-style: none;
-}
-.bodyResume hr {
-	margin: 0.5em 0;
-}
-.bodyResume i {
-	color: grey;
-}
-
-.bodyResume section {
-	padding: 10px 0;
-}
-
-.bodyResume  section.heading a{
-	display: block;
-}
-
-.bodyResume  section.key-skills ul  {
-	margin: 0 0 0 0.9375em;
-}
-.bodyResume  section.key-skills ul li{
-	list-style: disc;
-}
-.bodyResume  section.key-skills ol li {
-	list-style-type: square; 
-}
-
-.bodyResume section.employment-history .role {
-	padding: 0 0.9375em 15px;
-	margin: 0 0 15px; 
-}
-.bodyResume section.employment-history  .duration,
-.bodyResume section.employment-history  .title  {
-	font-weight: 700;
-	text-transform: uppercase;
-} 
-
-.bodyResume section.employment-history .js-masonry {
-	margin-left: 0;
-}
-.bodyResume section.employment-history .js-masonry li {
-	width: 32%; 
-	line-height: 1.25em;
-	border: 1px solid #2ba6cb;
-	padding: 5px 10px;
-	border-radius: 8px; 
-	list-style: none;
-	margin: 5px;
-	word-wrap: break-word;
-}
-.bodyResume section.employment-history .responsibilities  > li,
-.bodyResume section.employment-history .projects  > li  {
-	font-size: 0.75em;
-}
-.bodyResume section.employment-history .js-masonry .col3 {
-	width: 98%;
-}
-.bodyResume section.employment-history ol.inner-list li {
-	width: 31%;
-	display: inline-block;
-}
-
-@media screen and (max-width: 767px) {
-	.bodyResume section.employment-history .js-masonry li { 
-		width: 45%;
 	}
-	.bodyResume section.employment-history ol.inner-list li {
-		width: 45%;
+	h1 {
+		margin-bottom: 0;
+		margin-top: 0;
 	}
-}
-@media screen and (max-width: 479px) {
-	.bodyResume section.employment-history .js-masonry li { 
-		width: 98%;
+	h6 {
+		text-transform: uppercase;
+		font-size: 0.75em;
+		font-weight: 400;
 	}
-	.bodyResume section.employment-history ol.inner-list li {
-		width: 98%;
+	ul {
+		line-height: 1.5em;
+		margin-bottom: 0;
+
+		li {
+			list-style: none;
+		}
+	}
+	 hr {
+		margin: 0.5em 0;
+	}
+	i {
+		color: grey;
+	}
+	section {
+		padding: 10px 0;
+
+		&.heading a{
+			display: block;
+		}
+		&.key-skills { 
+			ul {
+				margin: 0 0 0 0.9375em;
+
+			 	li{
+					list-style: disc;
+				}
+			}
+			ol {
+				li {
+					list-style-type: square; 
+				}
+			}
+		}
+		&.employment-history {
+			.role {
+				padding: 0 0.9375em 15px;
+				margin: 0 0 15px; 
+			}
+			.duration, .title {
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+			.js-masonry {
+				margin-left: 0;
+
+				li {
+					width: 32%; 
+					line-height: 1.25em;
+					border: 1px solid #2ba6cb;
+					padding: 5px 10px;
+					border-radius: 8px; 
+					list-style: none;
+					margin: 5px;
+					word-wrap: break-word;
+				}
+				.col3 {
+					width: 98%;
+				}
+			}
+			.responsibilities, .projects {
+				> li {
+					font-size: 0.75em;
+				}
+			}
+			ol {
+				&.inner-list {
+					li{
+						width: 31%;
+						display: inline-block;	
+					}
+				}	
+			}
+		}
 	}
 }
 
+
+@media screen and (max-width:  64.063rem) {
+	.bodyResume {
+		section {
+			&.employment-history {
+				.js-masonry {
+					li {
+						width: 45%;
+					}
+				}
+				ol {
+					&.inner-list {
+						li {
+							width: 45%;
+						}
+					} 
+				}
+			} 
+		}
+	}
+}
+
+
+@media screen and (max-width: 40.063rem) {
+	.bodyResume {
+		section {
+			&.employment-history {
+				.js-masonry {
+					li {
+						width: 98%;
+					}
+				}
+				ol {
+					&.inner-list {
+						li {
+							width: 98%;
+						}
+					} 
+				}
+			} 
+		}
+	}
+}
+
+
+
+ 

@@ -31,6 +31,7 @@ html#map {
 					font-weight: 700;
 					text-transform: uppercase;
 					text-decoration: underline;
+					display: block;
 
 					&:hover {
 						text-decoration: none;
@@ -39,7 +40,6 @@ html#map {
 			}
 		}
 	}
-
 	.map-canvas{
 		height: 100%;	
 
@@ -57,13 +57,13 @@ html#map {
 	}
 }
  
-@media only screen and (min-width: 64.063rem) {	// 1024px
+@media only screen and (max-width: 64.063rem) {	// 1024px
 	.bodyMap {
 		.place-list {
 			height: auto;
 
 		 	li {
-				min-width: 125px; 
+				width: 100%;
 
 				&.columns {
 					:last-child {
@@ -75,8 +75,11 @@ html#map {
 	}
 } 
 
-@media only screen and (min-width: 40.063rem) {	// 640px
+@media only screen and (max-width: 40.063rem) {	// 640px
 	.bodyMap { 
+		.places {
+			top: 55px;
+		}
 		.place-list {
 			li {
 				min-width: 100px;
@@ -89,37 +92,3 @@ html#map {
 	}
 }
 
-
-/*
-body.map { }
-
-.map .full-width { }
-.map .row.map-row { }
-
-.map .places { }
-.map .place-list { } 
-.map .place-list li { }
-.map .place-list li  a.city { }
-.map .place-list li  a.city:hover { }
-
-.map  .map-canvas{ }
-.map .map-canvas .wheel { }
-
-@media only screen and (max-width: 767px) {
-	.map  .map-canvas{ }
-	
-	.map .places { }
-
-	.map .place-list { }
-	
-	.map .place-list li { }
-	
-	.map .place-list li.columns:last-child { }
-} 
-
-@media only screen and (max-width: 499px) {
-	.map .place-list li { }
-	
-	.map .place-list li .arrival-time { }
-}
-*/
