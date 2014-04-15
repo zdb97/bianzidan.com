@@ -1,10 +1,14 @@
-// Comment out this import if you don't want to use normalize
-@import "normalize";
 
-// Comment out this import if  customizing the imports below
-@import "foundation";
-//@import "foundation/variables";
-//@import "foundation/components/inline-lists";
+//@import "foundation";
+
+@import "normalize";
+@import "foundation/variables";
+@import "foundation/components/global", 
+	"foundation/components/grid",
+	"foundation/components/visibility",
+	"foundation/components/block-grid",
+	"foundation/components/type",
+	"foundation/components/buttons";
 
 @import "global";
 @import "font";
