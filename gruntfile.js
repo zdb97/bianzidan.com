@@ -4,40 +4,61 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
-
-	compass: {                  // Task
-		prod: {                   // Target
-		  	options: {              // Target options
-		  		config: 'compass_conf.rb',
+	
+	// CONFIG ===================================
+	compass: {                  
+		prod: {                   
+		  	options: {              
+		  		//config: 'compass_conf.rb',
 				sassDir: 'scss',
 				cssDir: 'css',
+				javascriptsDir: 'js',
+				require: [
+				  'zurb-foundation'
+				],
 				environment: 'production',
 				outputStyle: 'compressed',
-				noLineComments: true
+				noLineComments: true,
+				debugInfo: false
 		  	}
 		},
-		dev: {                    // Another target
+		dev: {                    
 		  	options: {
-		  		config: 'compass_conf.rb',
+		  		//config: 'compass_conf.rb',
 				sassDir: 'scss',
 				cssDir: 'css',
+				javascriptsDir: 'js',
+				require: [
+				  'zurb-foundation'
+				],
 				environment: 'development',
 				outputStyle: 'compact',
-				noLineComments: false
+				noLineComments: false,
+				debugInfo: true
 		  	}
 		}
-  	}
-
+  	},
+	
+	watch: {
+		compassProd: {
+			files: 'scss/*.scss',
+			tasks: ['compass:prod']
+		},	
+		compassDev: {
+			files: 'scss/*.scss',
+			tasks: ['compass:dev']
+		}
+	}
   });
 
-  // Load the plugin that provides the "uglify" task.
+  // Load the plugins =====================================
   //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Default task(s).
+  // TASKS =====================================
   //grunt.registerTask('default', ['uglify']);
-  //grunt.registerTask('default', ['jshint', 'compass']);
-	grunt.registerTask('default', ['compass:prod']);
+  grunt.registerTask('default', ['jshint', 'compass']);
 
   };
