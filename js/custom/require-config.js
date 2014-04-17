@@ -1,5 +1,6 @@
 require.config({
-	baseUrl: "./js/",
+	//baseUrl: "./js/",
+	baseUrl: "./js_min/",
 	paths: {
 		custom: "custom/",
 		lib: "lib/",
@@ -9,17 +10,20 @@ require.config({
 		backbone: "//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min",
 		masonry: "//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.1/masonry.pkgd", 
 		async: "lib/async",
-		
+		responsivenav: "lib/responsive-nav.min",
 		/*
 		jquery: "lib/jquery-1.10.2.min",
 		underscore: "lib/underscore-min",
 		backbone: "lib/backbone-min",
 		masonry: "lib/masonry.pkgd.min",
+		async: "lib/async",
+		responsivenav: "lib/responsive-nav.min",
 		*/
 		
 		// internal js
 		map: "custom/map",
 		resume: "custom/resume"
+		
 	},
 	/* 
 	 * shim: http://requirejs.org/docs/api.html#config-shim
@@ -36,6 +40,9 @@ require.config({
 		'masonry': {
 			deps: ['jquery'],
 			exports: 'masonry'
+		},
+		'responsivenav': {
+			exports: 'responsiveNav'
 		}
 	}
 });
