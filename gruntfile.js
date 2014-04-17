@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 		custom: {
 			files: {
 				'js_min/custom/require-config.js': ['js/custom/require-config.js'],
+				'js_min/custom/index.js': ['js/custom/index.js'],
 				'js_min/custom/map.js': ['js/custom/map.js'],
 				'js_min/custom/resume.js': ['js/custom/resume.js']
 			}
@@ -66,7 +67,6 @@ module.exports = function(grunt) {
   });
 
   // Load the plugins =====================================
-  //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');

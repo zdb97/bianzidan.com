@@ -1,6 +1,6 @@
 require.config({
-	//baseUrl: "./js/",
-	baseUrl: "./js_min/",
+	baseUrl: "./js/",
+	//baseUrl: "./js_min/",
 	paths: {
 		custom: "custom/",
 		lib: "lib/",
@@ -21,6 +21,7 @@ require.config({
 		*/
 		
 		// internal js
+		index: "custom/index",
 		map: "custom/map",
 		resume: "custom/resume"
 		
