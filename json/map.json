@@ -64,6 +64,16 @@
 			"show_on_map":		"false"
         },
 		{
+            "city": 			"Tasmania",
+			"lat": 				"-41.36504",
+			"lng": 				"146.62849",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2014/02",
+			"image":			"",
+			"show_on_map":		"false",
+			"zoom":				8
+        },
+		{
             "city": 			"Wuhan",
 			"lat": 				"30.59310",
 			"lng": 				"114.30539",
@@ -79,7 +89,8 @@
 			"country": 			"China",
 			"time_of_first_arrival":	"2006/02",
 			"image":			"",
-			"show_on_map":		"false"
+			"show_on_map":		"false",
+			"zoom":				11
         },
 		{
             "city": 			"Singapore",
@@ -87,6 +98,16 @@
 			"lng": 				"103.84621",
 			"country": 			"Singapore",
 			"time_of_first_arrival":	"2012/10",
+			"image":			"",
+			"show_on_map":		"false",
+			"zoom":				13
+        },
+		{
+            "city": 			"Taipei",
+			"lat": 				"25.09108",
+			"lng": 				"121.55983",
+			"country": 			"Taiwan",
+			"time_of_first_arrival":	"2013/12",
 			"image":			"",
 			"show_on_map":		"false"
         },
@@ -125,6 +146,43 @@
 			"time_of_first_arrival":	"2012/01",
 			"image":			"",
 			"show_on_map":		"false"
-        }
+        },
+		{
+			"city": 			"Tokyo",
+			"lat": 				"35.68949",
+			"lng": 				"139.69171",
+			"country": 			"Japan",
+			"time_of_first_arrival":	"2014/11",
+			"image":			"",
+			"show_on_map":		"false"
+		},
+		{
+			"city": 			"Hakone",
+			"lat": 				"35.23236",
+			"lng": 				"139.10694",
+			"country": 			"Japan",
+			"time_of_first_arrival":	"2014/11",
+			"image":			"",
+			"show_on_map":		"false"
+		},
+		{
+			"city": 			"Kyoto",
+			"lat": 				"35.01164",
+			"lng": 				"135.76803",
+			"country": 			"Japan",
+			"time_of_first_arrival":	"2014/11",
+			"image":			"",
+			"show_on_map":		"false"
+		},
+		{
+			"city": 			"Osaka",
+			"lat": 				"34.69374",
+			"lng": 				"135.50217",
+			"country": 			"Japan",
+			"time_of_first_arrival":	"2014/11",
+			"image":			"",
+			"show_on_map":		"false"
+		}
+		
     ]
 }
