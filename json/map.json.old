@@ -1,0 +1,188 @@
+ {
+    "places": [
+        {
+            "city": 			"Sydney",
+			"lat": 				"-33.8688",
+			"lng": 				"151.2195",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2002/04",
+			"image":			"",
+			"show_on_map":		"true"
+        },
+		{
+            "city": 			"Canberra",
+			"lat": 				"-35.28200",
+			"lng": 				"149.12868",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2006/07",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+            "city": 			"Brisbane",
+			"lat": 				"-27.47101",
+			"lng": 				"153.02345",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2007/01",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+            "city": 			"Gold Coast",
+			"lat": 				"-28.01726",
+			"lng": 				"153.42570",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2007/01",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+            "city": 			"Perth",
+			"lat": 				"-31.95300",
+			"lng": 				"115.85747",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2009/12",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+            "city": 			"Melbourne",
+			"lat": 				"-37.8149",
+			"lng": 				"144.9588",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2010/09",
+			"image":			"",
+			"show_on_map":		"false"
+        },  
+		{
+            "city": 			"Adelaide",
+			"lat": 				"-34.92862",
+			"lng": 				"138.59996",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2013/10",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+            "city": 			"Tasmania",
+			"lat": 				"-41.36504",
+			"lng": 				"146.62849",
+			"country": 			"Australia",
+			"time_of_first_arrival":	"2014/02",
+			"image":			"",
+			"show_on_map":		"false",
+			"zoom":				8
+        },
+		{
+            "city": 			"Wuhan",
+			"lat": 				"30.59310",
+			"lng": 				"114.30539",
+			"country": 			"China",
+			"time_of_first_arrival":	"1984/01",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+            "city": 			"Hong Kong",
+			"lat": 				"22.27925",
+			"lng": 				"114.17404",
+			"country": 			"China",
+			"time_of_first_arrival":	"2006/02",
+			"image":			"",
+			"show_on_map":		"false",
+			"zoom":				11
+        },
+		{
+            "city": 			"Singapore",
+			"lat": 				"1.27989",
+			"lng": 				"103.84621",
+			"country": 			"Singapore",
+			"time_of_first_arrival":	"2012/10",
+			"image":			"",
+			"show_on_map":		"false",
+			"zoom":				13
+        },
+		{
+            "city": 			"Taipei",
+			"lat": 				"25.09108",
+			"lng": 				"121.55983",
+			"country": 			"Taiwan",
+			"time_of_first_arrival":	"2013/12",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+        {
+            "city": 			"Paris",
+			"lat": 				"48.85661",
+			"lng": 				"2.35222",
+			"country": 			"France",
+			"time_of_first_arrival":	"2012/01",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+            "city": 			"Rome",
+			"lat": 				"41.89292",
+			"lng": 				"12.48252",
+			"country": 			"Italy",
+			"time_of_first_arrival":	"2012/01",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+            "city": 			"Florence",
+			"lat": 				"43.77103",
+			"lng": 				"11.24800",
+			"country": 			"Italy",
+			"time_of_first_arrival":	"2012/01",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+            "city": 			"Milan",
+			"lat": 				"45.46545",
+			"lng": 				"9.18652",
+			"country": 			"Italy",
+			"time_of_first_arrival":	"2012/01",
+			"image":			"",
+			"show_on_map":		"false"
+        },
+		{
+			"city": 			"Tokyo",
+			"lat": 				"35.68949",
+			"lng": 				"139.69171",
+			"country": 			"Japan",
+			"time_of_first_arrival":	"2014/11",
+			"image":			"",
+			"show_on_map":		"false"
+		},
+		{
+			"city": 			"Hakone",
+			"lat": 				"35.23236",
+			"lng": 				"139.10694",
+			"country": 			"Japan",
+			"time_of_first_arrival":	"2014/11",
+			"image":			"",
+			"show_on_map":		"false"
+		},
+		{
+			"city": 			"Kyoto",
+			"lat": 				"35.01164",
+			"lng": 				"135.76803",
+			"country": 			"Japan",
+			"time_of_first_arrival":	"2014/11",
+			"image":			"",
+			"show_on_map":		"false"
+		},
+		{
+			"city": 			"Osaka",
+			"lat": 				"34.69374",
+			"lng": 				"135.50217",
+			"country": 			"Japan",
+			"time_of_first_arrival":	"2014/11",
+			"image":			"",
+			"show_on_map":		"false"
+		}
+		
+    ]
+}

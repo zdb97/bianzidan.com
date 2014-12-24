@@ -12,10 +12,20 @@ body, ul, ol, dl {
 
 a { 
 	text-decoration: underline;
+	font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
 
 	&:hover {
 		text-decoration: none;
 	}
 }
+
+.accordion {
+	.accordion-navigation {
+		& >a {
+			font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
+			text-decoration: none;
+		} 
+	}
+} 
 
 

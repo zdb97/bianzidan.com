@@ -39,8 +39,9 @@ define(
         var placeCollection = Backbone.Collection.extend({
 
             model: placeModel,
-            url: "json/map.json", // url ralative to html page
-          
+            //url: "json/map.json", // url ralative to html page
+            url: "json/map2.json",
+
             initialize: function() {
                 console.log('placeCollection initialized');
 
