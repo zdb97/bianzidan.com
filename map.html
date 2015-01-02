@@ -39,6 +39,7 @@
 				5. foundation5 css to work with gem / bower
 				6. add watch task
 				7. map to add city text and other informative info
+				8. error detection on map loading
 		-->
 	</head>
 
@@ -56,14 +57,14 @@
 		
 	
 					
-		<!-- TODO: search field-->
+		<!-- TODO: search field -->
 		<div class="row full-width" style="display: none;">	
 			<div class="columns large-12 small-12">
 				<input id="searchTextField" type="text" placeholder="enter a location" class="columns large-10 small-9">
 				<input type="button" value="go" class="columns large-1 small-2 radius button tiny" />
 			</div>
 		</div>
-			
+		<!-- TODO: search field -->
 		
 		<div class="row full-width main-row">			
 		
@@ -75,14 +76,14 @@
 				</dl>
 			</div>
 
-			
+			<!-- map canvas -->
 			<div id="map-canvas" class="map-canvas columns large-9 medium-9 small-12">
 				<div class="wheel"></div>
 			</div> 
 		</div>
 		
 
-		<script type="text/html" id="region-item">
+		<script type="text/html" id="region-template">
 			<dd class="accordion-navigation large-12 medium-12 small-12 columns region" data-region="<%= region_id %>">
 				<a class="accordion-item" href="#panel-<%= region_id %>"><%= region %></a>
 				<div id="panel-<%= region_id %>" class="content columns large-12 medium-12 small-12">
@@ -93,7 +94,7 @@
 			</dd>
 		</script> 
 
-		<script type="text/html" id="place-item">
+		<script type="text/html" id="place-template">
 			<li class="large-12 small-4 columns place">
 				<a href="#?place=<%= name %>" class="city map-link" index=<%=index %>><%= name %></a>
 				<div class="arrival-time"><%= time_of_first_arrival %></div>
@@ -110,6 +111,7 @@
 		  ga('create', 'UA-41233908-1', 'bianzidan.com');
 		  ga('send', 'pageview');
 		</script> 
+
 	</body>
 </html>	
 	

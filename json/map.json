@@ -13,7 +13,7 @@
           "lng": "151.2195",
           "time_of_first_arrival": "2002/04",
           "image": "",
-          "show_on_map": "true",
+          "show_on_map": true,
           "zoom":  11
         },
         {
@@ -22,7 +22,7 @@
           "lng": "149.12868",
           "time_of_first_arrival": "2006/07",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  12
         },
         {
@@ -31,7 +31,7 @@
           "lng": "153.02345",
           "time_of_first_arrival": "2007/01",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  11
         },
         {
@@ -40,7 +40,7 @@
           "lng": "153.42570",
           "time_of_first_arrival": "2007/01",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  12
         },
         {
@@ -49,7 +49,7 @@
           "lng": "115.85747",
           "time_of_first_arrival": "2009/12",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  11
         },
         {
@@ -58,7 +58,7 @@
           "lng": "144.9588",
           "time_of_first_arrival": "2010/09",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  11
         },
         {
@@ -67,7 +67,7 @@
           "lng": "138.59996",
           "time_of_first_arrival": "2013/10",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  11
         },
         {
@@ -76,7 +76,7 @@
           "lng": "146.62849",
           "time_of_first_arrival": "2014/02",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom": 8
         }
       ]
@@ -94,7 +94,7 @@
           "lng": "2.35222",
           "time_of_first_arrival": "2012/01",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  11
         }
       ]
@@ -112,7 +112,7 @@
           "lng": "12.48252",
           "time_of_first_arrival": "2012/01",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  11
         },
         {
@@ -121,7 +121,7 @@
           "lng": "11.24800",
           "time_of_first_arrival": "2012/01",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  11
         },
         {
@@ -130,7 +130,7 @@
           "lng": "9.18652",
           "time_of_first_arrival": "2012/01",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  11
         }
       ]
@@ -148,7 +148,7 @@
           "lng": "139.69171",
           "time_of_first_arrival": "2014/11",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  11
         },
         {
@@ -157,7 +157,7 @@
           "lng": "139.10694",
           "time_of_first_arrival": "2014/11",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  12
         },
         {
@@ -166,7 +166,7 @@
           "lng": "135.76803",
           "time_of_first_arrival": "2014/11",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  12
         },
         {
@@ -175,7 +175,7 @@
           "lng": "135.50217",
           "time_of_first_arrival": "2014/11",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  12
         }
       ]
@@ -193,7 +193,7 @@
           "lng": "103.84621",
           "time_of_first_arrival": "2012/10",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom": 13
         }
       ]
@@ -211,7 +211,7 @@
           "lng": "114.17404",
           "time_of_first_arrival": "2006/02",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom": 13
         }
       ]
@@ -229,7 +229,7 @@
           "lng": "121.55983",
           "time_of_first_arrival": "2013/12",
           "image": "",
-          "show_on_map": "false",
+          "show_on_map": false,
           "zoom":  13
         }
       ]

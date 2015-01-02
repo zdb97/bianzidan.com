@@ -53,7 +53,6 @@ define(
              * parse is called by Backbone whenever a collection's models are returned by the server, in fetch
             * The function is passed the raw response object, and should return the array of model attributes to be added to the collection.
             */
-
             parse: function(response) {
 
                 var places = [];
@@ -70,48 +69,6 @@ define(
                 });
 
                 return places;
-            },
-
-            fetchJSON: function() {
-
-                var self = this;
-
-                self.fetch({
-                    // fetch the json url and returns the collection by (collection.parse)
-                    success: function(self, response) {
-                        console.log("fetch success: ", self, " ", response);
-                    },
-                    error: function() {
-                        console.error("fetching error....");
-                    },
-                    complete: function(xhr, response) {
-                        console.log("fetch complete: ", xhr, response);
-
-                        var mapview = new mapView({
-                            collection: self,
-                            el: "div#map-canvas",
-                            inputField: "#searchTextField"
-                        });
-
-                        var regionlistview = new regionListView({
-                            collection: self,
-                            el: ".region-list"
-                        });
-
-                        var regionLists = regionlistview.$el.find('dd.region');
-                        //console.log(regionList);
-                        $.each(regionLists, function(regionList) {
-                            //console.log($(this).attr('data-region'));
-                            var dataRegion = $(this).attr('data-region');
-
-                            var placelistview = new placeListView({
-                                collection: self,
-                                map: mapview,
-                                el: "ul.place-list-" + dataRegion
-                            }); 
-                        });
-                    }
-                });
             },
 
             addModel: function() {
@@ -131,14 +88,13 @@ define(
         * region list view
         */
         var regionListView = Backbone.View.extend({
-            template: _.template($("#region-item").html()),
+            template: _.template($("#region-template").html()),
 
             events: {
 				"click .accordion-item": "accordionItemClick"
             },
 
             initialize: function(options) {
-                //this.setElement($('ul.place-list'));
                 console.log("region view initialized: ", options);
 
                 this.collection = options.collection;
@@ -148,10 +104,7 @@ define(
 
             render: function() {
                 var self = this;
-
-                //self.collection.fetchJSON(function() {
                 self.addRegionDataToTemplate();
-                //});
 
                 return this;
             },
@@ -161,6 +114,7 @@ define(
                 var html = "";
                 var regions = [];
 
+                // fill list "regions" e.g: [{"region":"region", "region_id": "region_id"}]
                 _.each(self.collection.models, function(model, index) {
                     regions.push({
                         "region": model.get("region"),
@@ -168,8 +122,8 @@ define(
                     });
                 });
 
+                // find the unique collections from the list (unique region list)
                 regions = _.uniq(regions, function(region) { return region.region_id; })
-                //console.log(regions);
 
                 _.each(regions, function(region, index) {
                     html += self.template({
@@ -190,14 +144,13 @@ define(
         * place list view
         */
         var placeListView = Backbone.View.extend({
-            template: _.template($("#place-item").html()),
+            template: _.template($("#place-template").html()),
 
             events: {
                 "click .map-link": "listItemClick"
             },
 
             initialize: function(options) {
-                //this.setElement($('ul.place-list'));
                 //console.log("place view initialized: ", options);
 
                 this.collection = options.collection;
@@ -208,11 +161,7 @@ define(
 
             render: function() {
                 var self = this;
-
-                //self.collection.fetchJSON(function() {
                 self.addCollectionDataToTemplate();
-               // self.map.render();
-                //});
 
                 return this;
             },
@@ -220,6 +169,7 @@ define(
             addCollectionDataToTemplate: function() {
                 var self = this;
                 var html = "";
+                var selected = false;
 
                 _.each(self.collection.models, function(model, index) {
                     if (self.$el.hasClass('place-list-' + model.get('region_id'))) {
@@ -230,16 +180,31 @@ define(
                         });
 
                         html += self.template(model.toJSON());
+
+                        if (model.get('show_on_map') === true) {
+                            selected = true;
+                        }
                     }
 
                 });
 
                 self.$el.append(html);
+                //FIXME: not ideal, better put region as a standalone model
+                self.setActivePanel(selected, self.$el);
+                
+            },
+
+            //FIXME: not ideal, better put region as a standalone model
+            setActivePanel: function (selected, $obj) {
+                if (selected === true) {
+                    $obj.closest('div.content').addClass('active');
+                    $obj.closest('dd.region').addClass('active');
+                }
             },
 
             getDisplayModel: function() {
                 return _.find(this.collection.models, function(model, index) {
-                    return (model.get("show_on_map") === "true");
+                    return (model.get("show_on_map") === true);
                 });
             },
 
@@ -251,8 +216,8 @@ define(
 
             updateModels: function(currentDisplayModel, clickModel) {
                 if (clickModel !== currentDisplayModel) {
-                    currentDisplayModel.set("show_on_map", "false");
-                    clickModel.set("show_on_map", "true");
+                    currentDisplayModel.set("show_on_map", false);
+                    clickModel.set("show_on_map", true);
                 }
             },
 
@@ -287,7 +252,7 @@ define(
 				this.render();
             },
 
-            render: function() { //console.log('render');
+            render: function() {
                 var currentDisplayModel = this.getDisplayModel();
                 var myPosition = new google.maps.LatLng(parseFloat(currentDisplayModel.toJSON().lat), parseFloat(currentDisplayModel.toJSON().lng));
                 var zoom = currentDisplayModel.toJSON().zoom == "" ? this.DEFAULT_ZOOM : currentDisplayModel.toJSON().zoom; //this.ZOOM,
@@ -344,7 +309,7 @@ define(
 
             getDisplayModel: function() {
                 return _.find(this.collection.models, function(model, index) {
-                    return (model.get("show_on_map") === "true");
+                    return (model.get("show_on_map") === true);
                 });
             }
         });
@@ -354,16 +319,48 @@ define(
         // app init
         $(function(){
             var dataCollection = new placeCollection();
-            dataCollection.fetchJSON();
-
             var navigation = responsiveNav(".nav-collapse");
 
+            dataCollection.fetch({
+                // fetch the json url and returns the collection by (collection.parse)
+                success: function(data, response) {
+                    console.log("fetch success: ", data, " ", response);
+                },
+                error: function() {
+                    console.error("fetching error....");
+                },
+                complete: function(xhr, response) {
+                    console.log("fetch complete: ", xhr, response);
+
+                    var mapview = new mapView({
+                        collection: dataCollection,
+                        el: "div#map-canvas",
+                        inputField: "#searchTextField"
+                    });
+
+                    var regionlistview = new regionListView({
+                        collection: dataCollection,
+                        el: ".region-list"
+                    });
+
+                    var regionLists = regionlistview.$el.find('dd.region');
+                    $.each(regionLists, function(regionList) {
+                        var dataRegion = $(this).attr('data-region');
+
+                        var placelistview = new placeListView({
+                            collection: dataCollection,
+                            map: mapview,
+                            el: "ul.place-list-" + dataRegion
+                        }); 
+                    });
+                }
+            });
+
             $(document).foundation({
-                accordion: {/*
+                accordion: { /*
                     callback: function(accordion) {
                         console.log(accordion);
-                    }
-                    */
+                    } */
                 }
             });
         });
