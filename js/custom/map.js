@@ -1,31 +1,48 @@
 define(
     [
-        "jquery",
-        "underscore",
-        "backbone",
-        "responsivenav",
-        "modernizr",
-        "foundation",
-        "accordion",
-        "async!//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"
+        'jquery',
+        'underscore',
+        'backbone',
+        'responsivenav',
+        'modernizr',
+        'foundation',
+        'accordion',
+        'async!//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places'
     ],
 
     function($, _, Backbone, responsiveNav, Modernizr, foundation, accordion) {
+		/*
+		 * default map data model
+		 */
+		var defaultMapDataModel = Backbone.Model.extend({
+			defaults: {
+                lat: 0,
+                lng: 0,
+				zoom: 0
+			},
+			
+			url: 'json/map.json', // url ralative to html page
+			
+			parse: function(response) {
+                return response.default_map_data;
+            }
+		});
+	
         /*
         * place model
         */
         var placeModel = Backbone.Model.extend({
             defaults: {
-                name: "",
-                lat: "",
-                lng: "",
-                time_of_first_arrival: "",
-                region: "",
-                region_id: "",
-                image: "",
-                index: "",
-                show_on_map: "",
-                zoom: ""
+                name: '',
+                lat: '',
+                lng: '',
+                time_of_first_arrival: '',
+                region: '',
+                region_id: '',
+                image: '',
+                index: '',
+                selected: false,
+                zoom: 0
             },
 
             initialize: function() {
@@ -39,14 +56,14 @@ define(
         var placeCollection = Backbone.Collection.extend({
 
             model: placeModel,
-            url: "json/map.json", // url ralative to html page
+            url: 'json/map.json', // url ralative to html page
           
             initialize: function() {
                 console.log('placeCollection initialized');
 
-                this.on("add", this.addModel, this);
-                this.on("remove", this.removeModel, this);
-                this.on("reset", this.resetModel, this);
+                this.on('add', this.addModel, this);
+                this.on('remove', this.removeModel, this);
+                this.on('reset', this.resetModel, this);
             },
 
             /*
@@ -75,29 +92,48 @@ define(
             },
 
             removeModel: function() {
-                console.log("placeCollection model removed, models count: ", this.models.length);
+                console.log('placeCollection model removed, models count: ', this.models.length);
             },
 
             resetModel: function() {
-                console.log("placeCollection model re-set.");
+                console.log('placeCollection model re-set.');
+            },
+			
+			getSelectedModel: function() {
+				return  _.find(this.models, function(model) {
+                    return (model.get('selected') === true) ;
+                });
+            },
+			
+			updateSelectedModels: function(selectedModel) {
+				_.each(this.models, function(model){
+					if (model === selectedModel) {
+						model.set('selected', true);
+					}
+					else {
+						model.set('selected', false);
+					}
+				});
+                
             }
         });
-
 
         /*
         * region list view
         */
         var regionListView = Backbone.View.extend({
-            template: _.template($("#region-template").html()),
+            template: _.template($('#region-template').html()),
 
             events: {
-				"click .accordion-item": "accordionItemClick"
+				'click .accordion-item': 'accordionItemClick',
+				'click #back-to-full-map': 'fullMapClick'
             },
 
             initialize: function(options) {
-                console.log("region view initialized: ", options);
+                console.log('region view initialized: ', options);
 
                 this.collection = options.collection;
+				this.map = options.map;
                 this.el = options.el;
                 this.render();
             },
@@ -111,14 +147,14 @@ define(
 
             addRegionDataToTemplate: function() {
                 var self = this;
-                var html = "";
+                var html = '';
                 var regions = [];
 
                 // fill list "regions" e.g: [{"region":"region", "region_id": "region_id"}]
                 _.each(self.collection.models, function(model, index) {
                     regions.push({
-                        "region": model.get("region"),
-                        "region_id": model.get("region_id")
+                        'region': model.get('region'),
+                        'region_id': model.get('region_id')
                     });
                 });
 
@@ -127,8 +163,8 @@ define(
 
                 _.each(regions, function(region, index) {
                     html += self.template({
-                        "region": region.region,
-                        "region_id": region.region_id
+                        'region': region.region,
+                        'region_id': region.region_id
                     });
                 });
 
@@ -137,6 +173,12 @@ define(
 			
 			accordionItemClick: function (e) {
 				e.preventDefault();
+			},
+			
+			fullMapClick: function (e) {
+				e.preventDefault();
+				this.collection.updateSelectedModels(null);
+				this.map.renderDefaultMap();
 			}
         });
 
@@ -144,14 +186,14 @@ define(
         * place list view
         */
         var placeListView = Backbone.View.extend({
-            template: _.template($("#place-template").html()),
+            template: _.template($('#place-template').html()),
 
             events: {
-                "click .map-link": "listItemClick"
+                'click .map-link': 'listItemClick'
             },
 
             initialize: function(options) {
-                //console.log("place view initialized: ", options);
+                //console.log('place view initialized: ', options);
 
                 this.collection = options.collection;
                 this.map = options.map;
@@ -168,7 +210,7 @@ define(
 
             addCollectionDataToTemplate: function() {
                 var self = this;
-                var html = "";
+                var html = '';
                 var selected = false;
 
                 _.each(self.collection.models, function(model, index) {
@@ -181,53 +223,27 @@ define(
 
                         html += self.template(model.toJSON());
 
-                        if (model.get('show_on_map') === true) {
+                        if (model.get('selected') === true) {
                             selected = true;
                         }
                     }
-
                 });
 
                 self.$el.append(html);
-                //FIXME: not ideal, better put region as a standalone model
-                self.setActivePanel(selected, self.$el);
-                
             },
-
-            //FIXME: not ideal, better put region as a standalone model
-            setActivePanel: function (selected, $obj) {
-                if (selected === true) {
-                    $obj.closest('div.content').addClass('active');
-                    $obj.closest('dd.region').addClass('active');
-                }
-            },
-
-            getDisplayModel: function() {
-                return _.find(this.collection.models, function(model, index) {
-                    return (model.get("show_on_map") === true);
-                });
-            },
-
+			
             getClickModel: function(e) {
                 return _.find(this.collection.models, function(model, index) {
-                    return (parseInt(model.get("index")) === parseInt($(e.target).attr("index")));
+                    return (parseInt(model.get('index')) === parseInt($(e.target).attr('index')));
                 });
-            },
-
-            updateModels: function(currentDisplayModel, clickModel) {
-                if (clickModel !== currentDisplayModel) {
-                    currentDisplayModel.set("show_on_map", false);
-                    clickModel.set("show_on_map", true);
-                }
             },
 
             listItemClick: function(e) {
 				e.preventDefault();
-                var currentDisplayModel = this.getDisplayModel();
                 var clickModel = this.getClickModel(e);
-                this.updateModels(currentDisplayModel, clickModel);
-
-                this.map.render();
+				
+                this.collection.updateSelectedModels(clickModel);
+                this.map.renderSelectedPlace();
             }
         });
 
@@ -235,42 +251,57 @@ define(
          * map view
          */
         var mapView = Backbone.View.extend({
-
             map: null,
 
-            //constant
-            DEFAULT_ZOOM: 12,
-
             initialize: function(options) {
-                console.log("map view initialized.");
+                console.log('map view initialized.');
 
+				this.mapData = options.mapData;
                 this.collection = options.collection;
                 this.el = options.el;
-                this.inputField = options.inputField;
+                //this.inputField = options.inputField;
 				
-				// new
-				this.render();
+				this.renderDefaultMap();
             },
 
-            render: function() {
-                var currentDisplayModel = this.getDisplayModel();
-                var myPosition = new google.maps.LatLng(parseFloat(currentDisplayModel.toJSON().lat), parseFloat(currentDisplayModel.toJSON().lng));
-                var zoom = currentDisplayModel.toJSON().zoom == "" ? this.DEFAULT_ZOOM : currentDisplayModel.toJSON().zoom; //this.ZOOM,
-
-
-                var mapOptions = {
-                    center: myPosition,
-                    zoom: parseInt(zoom),
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
+			renderDefaultMap: function () {
+				var self = this;
+				
+				// google map options
+				var mapOptions = {
+					center: new google.maps.LatLng(this.mapData.get('lat'), this.mapData.get('lng')),
+                    zoom: this.mapData.get('zoom'),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+					panControl: false
                 };
+				//initialize google map
+				this.map = new google.maps.Map(this.$el.get(0), mapOptions);
+				
+				_.each(this.collection.models, function(model, index) {
+					// add location to map
+					self.addMarkerToMap(model);
+				});
+				
+				return this;
+			},
+			
+            renderSelectedPlace: function() {
+                var selectedModel = this.collection.getSelectedModel();
+                var currentLatLng = new google.maps.LatLng(parseFloat(selectedModel.get('lat')), parseFloat(selectedModel.get('lng')));
 
-                //initialize google map
+				// google map options
+                var mapOptions = {
+                    center: currentLatLng,
+                    zoom: parseInt(selectedModel.get('zoom')),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+					panControl: true
+                };
+                //load google map
                 this.map = new google.maps.Map(this.$el.get(0), mapOptions);
-                // initialize google map marker
-                this.addMarkerToMap(myPosition);
-
+                // add location to map
+                this.addMarkerToMap(selectedModel);
+				
                 // google auto complete
-
                 /*
                 var input = $(this.inputField).get(0);
                 var autocompleteOptions = {
@@ -285,32 +316,24 @@ define(
                 */
 
                 return this;
-
             },
 
-            setMapCenter: function(index) {
-                var lat = this.collection.models[index].get("lat");
-                var lng = this.collection.models[index].get("lng");
-                var myPosition = new google.maps.LatLng(parseFloat(lat), parseFloat(lng));
-
-                this.map.setCenter(myPosition);
-                this.addMarkerToMap(myPosition);
-            },
-
-            addMarkerToMap: function(position) {
-                var currentDisplayModel = this.getDisplayModel();
-
+            addMarkerToMap: function(model) {
+				var latlng = new google.maps.LatLng(parseFloat(model.get('lat')), parseFloat(model.get('lng')));
+				
                 var marker = new google.maps.Marker({
-                    position: position,
+                    position: latlng,
                     map: this.map,
-                    title: currentDisplayModel.toJSON().city
+					draggable:false,
+                    title: model.get('name')
                 });
-            },
-
-            getDisplayModel: function() {
-                return _.find(this.collection.models, function(model, index) {
-                    return (model.get("show_on_map") === true);
-                });
+				var infowindow = new google.maps.InfoWindow({
+					content: model.get('name')
+				});
+				
+				google.maps.event.addListener(marker, 'click', function() {
+					infowindow.open(this.map,marker);
+				});
             }
         });
 
@@ -318,43 +341,40 @@ define(
 		
         // app init
         $(function(){
+			var defaultMapData = new defaultMapDataModel();
             var dataCollection = new placeCollection();
-            var navigation = responsiveNav(".nav-collapse");
+            var navigation = responsiveNav('.nav-collapse');
 
-            dataCollection.fetch({
-                // fetch the json url and returns the collection by (collection.parse)
-                success: function(data, response) {
-                    console.log("fetch success: ", data, " ", response);
-                },
-                error: function() {
-                    console.error("fetching error....");
-                },
-                complete: function(xhr, response) {
-                    console.log("fetch complete: ", xhr, response);
+			$.when(dataCollection.fetch(), defaultMapData.fetch()).done(function(){
+			
+				var mapview = new mapView({
+					mapData: defaultMapData,
+					collection: dataCollection,
+					el: 'div#map-canvas'
+					//inputField: '#searchTextField'
+				});
 
-                    var mapview = new mapView({
-                        collection: dataCollection,
-                        el: "div#map-canvas",
-                        inputField: "#searchTextField"
-                    });
+				var regionlistview = new regionListView({
+					collection: dataCollection,
+					map: mapview,
+					el: '.region-list'
+				});
 
-                    var regionlistview = new regionListView({
-                        collection: dataCollection,
-                        el: ".region-list"
-                    });
+				var regionLists = regionlistview.$el.find('dd.region');
+				$.each(regionLists, function(regionList) {
+					var dataRegion = $(this).attr('data-region');
 
-                    var regionLists = regionlistview.$el.find('dd.region');
-                    $.each(regionLists, function(regionList) {
-                        var dataRegion = $(this).attr('data-region');
-
-                        var placelistview = new placeListView({
-                            collection: dataCollection,
-                            map: mapview,
-                            el: "ul.place-list-" + dataRegion
-                        }); 
-                    });
-                }
-            });
+					var placelistview = new placeListView({
+						collection: dataCollection,
+						map: mapview,
+						el: 'ul.place-list-' + dataRegion
+					}); 
+				});
+			
+			}).fail(function(){
+				console.log('data fetching error....');
+				alert('error with loading data, please contact site admin.');
+			});
 
             $(document).foundation({
                 accordion: { /*
