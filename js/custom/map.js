@@ -40,7 +40,7 @@ define(
                 region: '',
                 region_id: '',
                 image: '',
-                index: '',
+                index: 0,
                 selected: false,
                 zoom: 0
             },
@@ -211,21 +211,15 @@ define(
             addCollectionDataToTemplate: function() {
                 var self = this;
                 var html = '';
-                var selected = false;
 
                 _.each(self.collection.models, function(model, index) {
                     if (self.$el.hasClass('place-list-' + model.get('region_id'))) {
-                        // set index value of model at run time
-                        // fixme: index not needed any more??
+                        // set index value of model at run time.
                         model.set({
                             index: self.collection.indexOf(model)
                         });
 
                         html += self.template(model.toJSON());
-
-                        if (model.get('selected') === true) {
-                            selected = true;
-                        }
                     }
                 });
 
@@ -239,7 +233,6 @@ define(
             },
 
             listItemClick: function(e) {
-				e.preventDefault();
                 var clickModel = this.getClickModel(e);
 				
                 this.collection.updateSelectedModels(clickModel);
