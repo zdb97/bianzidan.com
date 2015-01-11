@@ -176,7 +176,7 @@ define(
 			},
 			
 			fullMapClick: function (e) {
-				e.preventDefault();
+			 e.preventDefault();
 				this.collection.updateSelectedModels(null);
 				this.map.renderDefaultMap();
 			}

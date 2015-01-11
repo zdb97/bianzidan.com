@@ -25,6 +25,10 @@ html#map {
 				font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
 			}
 		}
+		#back-to-full-map {
+			background:dodgerblue;
+			color: #fff;
+		}
 	}
 	.place-list {
 		height: 100%;
@@ -52,6 +56,9 @@ html#map {
 	.map-canvas {
 		height: 100%;	
 
+		img {
+			max-width : none;
+		}
 		.wheel {
 			position: absolute;
 			background: url(../img/loading.gif) 0 0 transparent;
@@ -72,8 +79,6 @@ html#map {
 			height: auto;
 
 		 	li {
-				width: 100%;
-
 				&.columns {
 					:last-child {
 						float: left;
@@ -96,14 +101,6 @@ html#map {
 			max-height: 300px;
 		}
 		.place-list {
-			li {
-				width: 33%;
-
-				.arrival-time {
-					display: none;
-				}
-			}
-
 			/* temp */
 			[class*="column"]+[class*="column"]:last-child {
 				float: left;

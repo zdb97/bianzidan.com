@@ -1,163 +1,163 @@
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined in IE 8/9. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000322}}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
 /** Correct `inline-block` display not defined in IE 8/9. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000332}}
 audio, canvas, video { display: inline-block; }
 
 /** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000341}}
 audio:not([controls]) { display: none; height: 0; }
 
 /** Address `[hidden]` styling not present in IE 8/9. Hide the `template` element in IE, Safari, and Firefox < 22. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000352}}
 [hidden], template { display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000356}}
 script { display: none !important; }
 
 /* ========================================================================== Base ========================================================================== */
 /** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000370}}
 html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
 
 /** Remove default margin. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000380}}
 body { margin: 0; }
 
 /* ========================================================================== Links ========================================================================== */
 /** Remove the gray background color from active links in IE 10. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\0000392}}
 a { background: transparent; }
 
 /** Address `outline` inconsistency between Chrome and other browsers. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003100}}
 a:focus { outline: thin dotted; }
 
 /** Improve readability when focused and also mouse hovered in all browsers. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003109}}
 a:active, a:hover { outline: 0; }
 
 /* ========================================================================== Typography ========================================================================== */
 /** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003122}}
 h1 { font-size: 2em; margin: 0.67em 0; }
 
 /** Address styling not present in IE 8/9, Safari 5, and Chrome. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003131}}
 abbr[title] { border-bottom: 1px dotted; }
 
 /** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003140}}
 b, strong { font-weight: bold; }
 
 /** Address styling not present in Safari 5 and Chrome. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003148}}
 dfn { font-style: italic; }
 
 /** Address differences between Firefox and other browsers. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003156}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003156}}
 hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
 
 /** Address styling not present in IE 8/9. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003166}}
 mark { background: #ff0; color: #000; }
 
 /** Correct font family set oddly in Safari 5 and Chrome. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003178}}
 code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
 
 /** Improve readability of pre-formatted text in all browsers. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003187}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003187}}
 pre { white-space: pre-wrap; }
 
 /** Set consistent quote types. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003195}}
 q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 
 /** Address inconsistent and variable font size in all browsers. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003203}}
 small { font-size: 80%; }
 
 /** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003212}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003212}}
 sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003219}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003219}}
 sup { top: -0.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003223}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003223}}
 sub { bottom: -0.25em; }
 
 /* ========================================================================== Embedded content ========================================================================== */
 /** Remove border when inside `a` element in IE 8/9. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003235}}
 img { border: 0; }
 
 /** Correct overflow displayed oddly in IE 9. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003243}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003243}}
 svg:not(:root) { overflow: hidden; }
 
 /* ========================================================================== Figures ========================================================================== */
 /** Address margin not present in IE 8/9 and Safari 5. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003255}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003255}}
 figure { margin: 0; }
 
 /* ========================================================================== Forms ========================================================================== */
 /** Define consistent border, margin, and padding. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003267}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003267}}
 fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
 
 /** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003278}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003278}}
 legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
 
 /** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003292}}
 button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
 
 /** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003304}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003304}}
 button, input { line-height: normal; }
 
 /** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003316}}
 button, select { text-transform: none; }
 
 /** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003331}}
 button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
 
 /** Re-set default cursor for disabled elements. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003341}}
 button[disabled], html input[disabled] { cursor: default; }
 
 /** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003351}}
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
 
 /** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003362}}
 input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
 
 /** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003375}}
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 
 /** Remove inner padding and border in Firefox 4+. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003384}}
 button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
 /** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003394}}
 textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
 
 /* ========================================================================== Tables ========================================================================== */
 /** Remove most spacing between table cells. */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003407}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/zurb-foundation-4\.3\.2\/scss\/normalize\.scss}line{font-family:\00003407}}
 table { border-collapse: collapse; border-spacing: 0; }
 
 /*
@@ -169,21 +169,21 @@ table { border-collapse: collapse; border-spacing: 0; }
 	"foundation/components/type",
 	"foundation/components/buttons";
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\000031}}
 body { padding-top: 5px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\000035}}
 body, ul, ol, dl { font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\000039}}
 .center { text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\0000313}}
 a { text-decoration: underline; font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\0000317}}
 a:hover { text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_global\.scss}line{font-family:\0000324}}
 .accordion .accordion-navigation > a { font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif; text-decoration: none; }
 
 @font-face { font-family: Amble-Regular; src: url(../font/Amble-Regular.ttf); }
@@ -193,128 +193,126 @@ a:hover { text-decoration: none; }
 @font-face { font-family: Amble-LightCondensed; src: url(../font/Amble-LightCondensed.ttf); }
 
 /*! responsive-nav.js 1.0.32 by @viljamis */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\000035}}
 .nav-collapse { width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\000038}}
 .nav-collapse.opened { max-height: 9999px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000312}}
 .nav-collapse ul { margin: 0; padding: 0; width: 100%; display: block; list-style: none; float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000320}}
 .nav-collapse li { width: 100%; display: block; float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000326}}
 .nav-collapse li.active a { color: gold !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000330}}
 .nav-collapse li a { text-transform: uppercase; font-weight: 400; letter-spacing: 2px; color: white; text-decoration: none; width: 100%; background: dodgerblue; border-bottom: 1px solid white; padding: .5rem 1rem; float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000342}}
 .nav-collapse li a:hover, .nav-collapse li a:focus, .nav-collapse li a:active { color: gold !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000350}}
 .js .nav-collapse { clip: rect(0 0 0 0); max-height: 0; position: absolute; display: block; overflow: hidden; zoom: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000360}}
 .disable-pointer-events { pointer-events: none !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000364}}
 .nav-toggle { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; width: 70px; height: 55px; float: right; text-indent: -9999px; overflow: hidden; display: block; background: dodgerblue url("../img/hamburger.gif") no-repeat 50% 33%; }
 
-@media screen and (min-width: 40.063rem) { @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000384}}
+@media screen and (min-width: 40.063rem) { @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000384}}
   .js .nav-collapse { position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000387}}
   .js .nav-collapse.closed { max-height: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000393}}
   .nav-toggle { display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\0000397}}
   .nav-collapse li { float: none; display: inline-block; width: auto; margin-left: .4em; margin-right: .2em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\00003105}}
   .nav-collapse li.active a { -webkit-font-smoothing: subpixel-antialiased; color: white; background: dodgerblue; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_responsive-nav\.scss}line{font-family:\00003112}}
   .nav-collapse li a { _float: none; -webkit-font-smoothing: antialiased; margin: 0; padding: 1.96em .7em .5em; background: transparent; color: #37302a; border: 0; -webkit-transition: background .5s ease; -moz-transition: background .5s ease; -o-transition: background .5s ease; transition: background .5s ease; font: normal 1rem/1rem inherit; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\000032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\000032}}
 .bodyResume h1, .bodyResume h2, .bodyResume h3, .bodyResume h4, .bodyResume h5, .bodyResume h6 { font-family: Cambria, Georgia, Times New Roman, Times, serif; text-transform: uppercase; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\000036}}
 .bodyResume h1 { margin-bottom: 0; margin-top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000310}}
 .bodyResume h6 { text-transform: uppercase; font-size: 0.75em; font-weight: 400; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000315}}
 .bodyResume ul { line-height: 1.5em; margin-bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000319}}
 .bodyResume ul li { list-style: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000323}}
 .bodyResume hr { margin: 0.5em 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000326}}
 .bodyResume i { color: grey; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000329}}
 .bodyResume section { padding: 10px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000332}}
 .bodyResume section.heading a { display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000336}}
 .bodyResume section.key-skills ul { margin: 0 0 0 0.9375em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000339}}
 .bodyResume section.key-skills ul li { list-style: disc; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000344}}
 .bodyResume section.key-skills ol li { list-style-type: square; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000350}}
 .bodyResume section.employment-history .role { padding: 0 0.9375em 15px; margin: 0 0 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000354}}
 .bodyResume section.employment-history .duration, .bodyResume section.employment-history .title { font-weight: 700; text-transform: uppercase; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000358}}
 .bodyResume section.employment-history .js-masonry { margin-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000361}}
 .bodyResume section.employment-history .js-masonry li { width: 32%; line-height: 1.25em; border: 1px solid #2ba6cb; padding: 5px 10px; border-radius: 8px; list-style: none; margin: 5px; word-wrap: break-word; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000371}}
 .bodyResume section.employment-history .js-masonry .col3 { width: 98%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000376}}
 .bodyResume section.employment-history .responsibilities > li, .bodyResume section.employment-history .projects > li { font-size: 0.75em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000382}}
 .bodyResume section.employment-history ol.inner-list li { width: 31%; display: inline-block; }
 
-@media screen and (max-width: 64.063rem) { @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000398}}
+@media screen and (max-width: 64.063rem) { @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\0000398}}
   .bodyResume section.employment-history .js-masonry li { width: 45%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\00003104}}
   .bodyResume section.employment-history ol.inner-list li { width: 45%; } }
-@media screen and (max-width: 40.063rem) { @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\00003120}}
+@media screen and (max-width: 40.063rem) { @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\00003120}}
   .bodyResume section.employment-history .js-masonry li { width: 98%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_resume\.scss}line{font-family:\00003126}}
   .bodyResume section.employment-history ol.inner-list li { width: 98%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\000031}}
 html#map { height: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\000035}}
 .bodyMap { padding: 5px 0 0; height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\000039}}
 .bodyMap .full-width { max-width: 100% !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000313}}
 .bodyMap .row.main-row { height: 90%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000319}}
 .bodyMap .accordion .accordion-navigation .accordion-item { text-transform: uppercase; margin-bottom: 1px; padding: 0.5rem; font-weight: 700; font-size: 0.75rem; font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000328}}
+.bodyMap .accordion #back-to-full-map { background: dodgerblue; color: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000333}}
 .bodyMap .place-list { height: 100%; overflow: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000337}}
 .bodyMap .place-list li { display: inline-block; padding: 3px 15px; font-size: 75%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000343}}
 .bodyMap .place-list li a.city { font-weight: 700; text-transform: uppercase; text-decoration: underline; display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000349}}
 .bodyMap .place-list li a.city:hover { text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000356}}
 .bodyMap .map-canvas { height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000359}}
+.bodyMap .map-canvas img { max-width: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000362}}
 .bodyMap .map-canvas .wheel { position: absolute; background: url(../img/loading.gif) 0 0 transparent; height: 207px; width: 207px; top: 50%; left: 50%; margin-top: -103px; margin-left: -103px; }
 
-@media only screen and (max-width: 64.063rem) { @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000371}}
+@media only screen and (max-width: 64.063rem) { @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000378}}
   .bodyMap .place-list { height: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000374}}
-  .bodyMap .place-list li { width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000383}}
   .bodyMap .place-list li.columns :last-child { float: left; } }
-@media only screen and (max-width: 40.063rem) { @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000390}}
+@media only screen and (max-width: 40.063rem) { @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000395}}
   .bodyMap .accordion .accordion-navigation { padding-left: 0; padding-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\00003100}}
   .bodyMap .map-canvas { max-height: 300px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\00003103}}
   .bodyMap .place-list { /* temp */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\0000399}}
-  .bodyMap .place-list li { width: 33%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\00003102}}
-  .bodyMap .place-list li .arrival-time { display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/GithubRepo\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\00003105}}
   .bodyMap .place-list [class*="column"] + [class*="column"]:last-child { float: left; } }

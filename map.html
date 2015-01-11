@@ -11,12 +11,7 @@
 		<meta name="author" content="Zidan Bian. 卞紫丹" />
 
 		<!-- FIXME: foundation css to be loaded from gem / bower -->
-		<link href="css/foundation5.min.css" rel="stylesheet" type="text/css" />
-		<!-- FIXME: move the css into scss code -->
-		<style>
-			#map-canvas img {max-width : none;}
-		</style>
-		
+		<link href="css/foundation5.min.css" rel="stylesheet" type="text/css" />		
 		<link href="css/map1.css?v=1.0" rel="stylesheet" type="text/css" /> 
 		<script src="js/lib/require.js"></script> 	
 		<script>
@@ -31,11 +26,8 @@
 		<!--
 			TODO:
 				5. foundation5 css to work with gem / bower
-				6. add watch task
 				7. map to add city text and other informative info
 				8. error detection on map loading
-				
-				remove in css '.arrival-time'
 		-->
 	</head>
 
@@ -69,7 +61,7 @@
 			<div class="columns large-3 medium-3 small-12">
 				<dl class="accordion row region-list" data-accordion>
 					<dd class="accordion-navigation large-12 medium-12 small-12 columns">
-						<a class="accordion-item" id="back-to-full-map" style="background:dodgerblue; color:white;">Back to full map</a>
+						<a class="accordion-item" id="back-to-full-map">Back to full map</a>
 					</dd>
 					<!-- backbone template -->
 				</dl>
@@ -94,7 +86,7 @@
 		</script> 
 
 		<script type="text/html" id="place-template">
-			<li class="large-12 small-4 columns place">
+			<li class="large-12 medium-12 small-6 columns place">
 				<a href="#map-canvas" title="<%= time_of_first_arrival %>" class="city map-link" index=<%=index %>><%= name %></a>
 			</li>
 		</script> 
