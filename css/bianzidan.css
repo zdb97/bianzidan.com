@@ -1187,4 +1187,6 @@ html#map { height: 100%; }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\00003103}}
   .bodyMap .place-list { /* temp */ }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\00003105}}
+  .bodyMap .place-list li { padding: 1px 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/zidan\/github\/bianzidan\.com\/scss\/_map\.scss}line{font-family:\00003109}}
   .bodyMap .place-list [class*="column"] + [class*="column"]:last-child { float: left; } }

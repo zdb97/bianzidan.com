@@ -101,6 +101,10 @@ html#map {
 			max-height: 300px;
 		}
 		.place-list {
+
+			li {
+				padding: 1px 15px;
+			}
 			/* temp */
 			[class*="column"]+[class*="column"]:last-child {
 				float: left;
