@@ -7,10 +7,11 @@ define(
         'modernizr',
         'foundation',
         'accordion',
+        'scrollto',
         'async!//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places'
     ],
 
-    function($, _, Backbone, responsiveNav, Modernizr, foundation, accordion) {
+    function($, _, Backbone, responsiveNav, Modernizr, foundation, accordion, scrollTo) {
 		/*
 		 * default map data model
 		 */
@@ -125,7 +126,6 @@ define(
             template: _.template($('#region-template').html()),
 
             events: {
-				'click .accordion-item': 'accordionItemClick',
 				'click #back-to-full-map': 'fullMapClick'
             },
 
@@ -171,14 +171,12 @@ define(
                 self.$el.append(html);
             }, 
 			
-			accordionItemClick: function (e) {
-				e.preventDefault();
-			},
-			
 			fullMapClick: function (e) {
-			 e.preventDefault();
-				this.collection.updateSelectedModels(null);
-				this.map.renderDefaultMap();
+                e.preventDefault();
+                this.collection.updateSelectedModels(null);
+                this.map.renderDefaultMap();
+
+                $('#map-canvas').ScrollTo();
 			}
         });
 
@@ -237,6 +235,8 @@ define(
 				
                 this.collection.updateSelectedModels(clickModel);
                 this.map.renderSelectedPlace();
+
+                $('#map-canvas').ScrollTo();
             }
         });
 

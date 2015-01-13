@@ -12,6 +12,7 @@ require.config({
 		modernizr: "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min",
 		async: "lib/async",
 		responsivenav: "lib/responsive-nav.min",
+		scrollto: "lib/jquery-scrollto",
 		foundation: "lib/foundation/foundation",
 		accordion: "lib/foundation/foundation.accordion",
 		/*
@@ -57,6 +58,10 @@ require.config({
 		},
 		'modernizr': {
             exports: 'modernizr'
+        },
+        'scrollto': {
+        	deps: ['jquery'],
+        	exports: 'scrollTo'
         }
 	}
 });
