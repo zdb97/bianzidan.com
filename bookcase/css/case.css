@@ -1,6 +1,4 @@
-body {
-	
-}
+body { }
 strong {
 	text-transform: uppercase;
 }
@@ -13,32 +11,24 @@ ul li.shelf {
 	
 }
 .shelf-wrapper {
-	width: 95%;
 	border: 1px solid #666;
 	border-radius: 0.375rem;
 	padding: 10px;
 	margin: 10px 0;
 }
 .shelf-books {
-	margin: 20px 0;
+	margin: 10px 0;
 	text-align: center;
-}
-.shelf-books h3 {
-  background: none repeat scroll 0 0 grey;
-    border-radius: 1rem;
-    color: #EEE;
-    font-size: 1rem;
-    margin: 10px 0;
-    text-shadow: 1px 1px 4px #CCC;
 }
 .shelf-books ol {
 	padding: 10px 5px;
 	border: 1px dotted #333;
+	margin-left: 0;
 }
 .shelf-books ol li.book {
 	text-align: left; 
 	margin: 0 0 5px 0; 
-	font-size: 0.75rem;
+	list-style: none;
 }
 .shelf-books ol li[genre="Biography"] { 
 	background-color: #FFF3E5;
@@ -62,6 +52,7 @@ ul li.shelf {
 .shelf-books ol li.book p {
  	line-height: 1rem;
     margin-bottom: 0.5rem;
+	font-size: 0.75rem;
 }
 
 
@@ -70,10 +61,10 @@ ul li.shelf {
 	border-radius: 0.375rem;
 	margin: 10px auto;
 	padding: 10px;
+	width: 95%;
 }
 #control-panel input, #control-panel select {
 	display: inline-block;
-	width: auto;
 	padding: 3px 5px;
 	margin: 3px 0;
 }
@@ -91,4 +82,8 @@ ul li.shelf {
 .sort-shelf, .add-book , .remove-book {
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+.sort-shelf label, .add-book label, .remove-book label {
+	padding-top: 9px;
+	padding-bottom: 9px;
 }

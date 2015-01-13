@@ -10,6 +10,7 @@
 
 == Sorting by genre is based on the assumption that the number of gneres is equal to the number of shelves.
 
+== Drag and drop not working for touch device
 
 == implemented features:
 1. Display all Meta data next to each book

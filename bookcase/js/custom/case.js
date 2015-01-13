@@ -12,8 +12,6 @@ $(function () {
 			console.log('genreModel initialized: ', this.toJSON());
 		}
 	});
-	
-	
 	/* 
 	 * genre collection 
 	 */
@@ -28,7 +26,6 @@ $(function () {
 	 	}
 		 
 	});
-
 
 	/* 
 	 * book model 
@@ -52,8 +49,6 @@ $(function () {
 			console.log('book moved to new shelf: ', this.toJSON());
 		}
 	});
-
-
 	/* 
 	 * book collection 
 	 */
@@ -115,8 +110,7 @@ $(function () {
 			});
 		}
 	});
-	
-
+	 
 	/*
 	* shelf model
 	*/	
@@ -130,8 +124,6 @@ $(function () {
 			console.log('shelfModel initialized: ', this.toJSON());
 		}
 	});
-
-
 	/*
 	* shelf collection
 	*/
@@ -193,8 +185,9 @@ $(function () {
 			});
 		}
 	});
-	
-
+	 
+	 
+	 
 	/*
 	 * book view
 	 */
@@ -246,11 +239,13 @@ $(function () {
 			
 			var data = e.originalEvent.dataTransfer.getData('text');
 
+			var data = e.originalEvent.dataTransfer.getData('text');
+
 			if(e.originalEvent.target.localName !== 'ol') {
-				$(this.el).find('ol').append(document.getElementById(data));	
+				$(this.el).find('ol').append($('#' + data));	
 			}
 			else {
-				$(e.originalEvent.target).append(document.getElementById(data));	
+				$(e.originalEvent.target).append($('#' + data));	
 			}
 
 			var $selectedBook = $(document.getElementById(data));
@@ -413,7 +408,7 @@ $(function () {
 					'shelf': $.trim($shelf.val())
 				});
 				
-				$msg.html('new book added.');
+				$msg.html('new book added.').fadeOut(3000);
 			}
 			else {
 				$msg.html('error, please fill all fields.');
@@ -427,7 +422,7 @@ $(function () {
 			if ($.trim($book.val()).length !== 0) { 
 				var bookToRemove = this.books.where({isbn: $.trim($book.val())}); 
 				this.books.remove(bookToRemove);
-				$msg.html('selected book is removed.');
+				$msg.html('selected book is removed.').fadeOut(3000);
 			}
 			else {
 				$msg.html('please make a selection.');
@@ -462,9 +457,6 @@ $(function () {
 
 	}
 	
-
-
-	
 	// fetch data for books collection
 	booksCollection.loadData(function () {
 		// fetch data for shelf collection 
@@ -488,7 +480,6 @@ $(function () {
 			});
 		});
 	});
-	 
 	
 });
  

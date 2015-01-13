@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	 
 		<meta name="author" content="Zidan Bian" />
 	
-		<link href="css/foundation.min.css" rel="stylesheet"> 
 		<link href="css/normalize.css" rel="stylesheet"> 
+		<link href="css/foundation5.min.css" rel="stylesheet"> 
 		<link href="css/case.css?v=1" rel="stylesheet"> 
 	
 		<script src="js/lib/jquery-1.10.2.min.js" type="text/javascript"></script>
@@ -20,18 +20,19 @@
 
 	<body>
 
-		<section id="control-panel" class="row">
-	  		<div class="sort-shelf large-12 small-12 columns">
-	  			<label>organize shelves by genre:</label>
+		<fieldset id="control-panel" class="row">
+			<legend><strong>Book Case Control Panel</strong></legend>
+			<div class="sort-shelf columns large-4 small-12">
+				<label>organize shelves by genre</label>
 				<select class="organize">
 					<option selected="selected" value="0">--select--</option>
 					<option value="asc">ascending order</option>
 					<option value="desc">descending order</option>
 				</select>
-	  		</div>
-			<div class="add-book large-12 small-12 columns">
-				<label>add book: </label>
-				<input type="text" placeholder="title" class="title" />
+			</div>
+			<div class="add-book columns large-4 small-12">
+				<label>add book</label>
+				<input type="text" placeholder="title" class="title" id="add-book-title" />
 				<input type="text" placeholder="ISBN" class="isbn" />
 				<input type="text" placeholder="author" class="author" />
 				<!-- backbone to populate the values -->
@@ -45,8 +46,8 @@
 				<input type="button" value="ADD" class="add-book-button" />
 				<span class="msg"></span>
 			</div>
-			<div class="remove-book large-12 small-12 columns">
-				<label>remove book: </label>
+			<div class="remove-book columns large-4 small-12">
+				<label>remove book</label>
 				<!-- backbone to populate the values -->
 				<select class="book-to-remove">
 					<option value="" selected="selected">--select ISBN--</option>
@@ -54,7 +55,7 @@
 				<input type="button" value="REMOVE" class="remove-book-button" />
 				<span class="msg"></span>
 			</div>
-		</section> 
+		</fieldset> 
 
 		<ul class="book-case row">
 			<!-- backbone template -->
@@ -68,8 +69,7 @@
 			</div> 
 		</script>
 
-		<script type="text/html" id="books"> 
-			<h3>BOOKS</h3>
+		<script type="text/html" id="books">
 		 	<ol>
 		 		<% 
 	 			for (var i = 0; i < books.length; i++) { 
