@@ -19,7 +19,8 @@ define(
 			defaults: {
                 lat: 0,
                 lng: 0,
-				zoom: 0
+				zoom: 0,
+				marker_icon: null
 			},
 			
 			url: 'json/map.json', // url ralative to html page
@@ -57,7 +58,7 @@ define(
         var placeCollection = Backbone.Collection.extend({
 
             model: placeModel,
-            url: 'json/map.json', // url ralative to html page
+            url: 'json/map.json?v=1', // url ralative to html page
           
             initialize: function() {
                 console.log('placeCollection initialized');
@@ -244,20 +245,23 @@ define(
          * map view
          */
         var mapView = Backbone.View.extend({
-            map: null,
-
+            
             initialize: function(options) {
                 console.log('map view initialized.');
 
 				this.mapData = options.mapData;
                 this.collection = options.collection;
                 this.el = options.el;
-                //this.inputField = options.inputField;
+				this.retina = options.retina;
+                this.inputField = options.inputField;//
+				this.map = null;
+				this.markers = [];
+				this.infoWindows = [];
 				
-				this.renderDefaultMap();
+				this.render();
             },
 
-			renderDefaultMap: function () {
+			render: function () {
 				var self = this;
 				
 				// google map options
@@ -272,29 +276,10 @@ define(
 				
 				_.each(this.collection.models, function(model, index) {
 					// add location to map
-					self.addMarkerToMap(model);
+					self.markers.push(self.addMarkerToMap(model));
 				});
 				
-				return this;
-			},
-			
-            renderSelectedPlace: function() {
-                var selectedModel = this.collection.getSelectedModel();
-                var currentLatLng = new google.maps.LatLng(parseFloat(selectedModel.get('lat')), parseFloat(selectedModel.get('lng')));
-
-				// google map options
-                var mapOptions = {
-                    center: currentLatLng,
-                    zoom: parseInt(selectedModel.get('zoom')),
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-					panControl: true
-                };
-                //load google map
-                this.map = new google.maps.Map(this.$el.get(0), mapOptions);
-                // add location to map
-                this.addMarkerToMap(selectedModel);
-				
-                // google auto complete
+				// google auto complete
                 /*
                 var input = $(this.inputField).get(0);
                 var autocompleteOptions = {
@@ -307,26 +292,60 @@ define(
                 //autocomplete.bindTo('bounds', map);
                 google.maps.event.addListener(autocomplete, 'place_changed', this.changeLocation);
                 */
-
-                return this;
+				
+				return this;
+			},
+			
+			renderDefaultMap: function () {
+				this.map.setZoom(this.mapData.get('zoom'));
+				this.map.setCenter(new google.maps.LatLng(this.mapData.get('lat'), this.mapData.get('lng')));
+				
+				// close all info windows
+				_.each(this.infoWindows, function(infoWindow, index){
+					infoWindow.close();
+				});
+			},
+			
+            renderSelectedPlace: function() {
+                var selectedModel = this.collection.getSelectedModel();
+                var latlng = new google.maps.LatLng(parseFloat(selectedModel.get('lat')), parseFloat(selectedModel.get('lng')));
+				
+				this.map.setCenter(latlng);
+				this.map.setZoom(selectedModel.get('zoom'));
             },
 
             addMarkerToMap: function(model) {
 				var latlng = new google.maps.LatLng(parseFloat(model.get('lat')), parseFloat(model.get('lng')));
+				var imageHTML = model.get('image') === '' ? '' : '<img class="place-image" src="' + model.get('image') + '" alt="' + model.get('name') + '" />';
+				var image = {
+					url: this.mapData.get('marker_icon'),
+					// This marker is 32 pixels wide by 32 pixels tall.
+					size: new google.maps.Size(26, 32), // red (25, 32),
+					// The origin for this image is 0, 52.
+					origin: new google.maps.Point(0, 52),	// red (25, 52)
+					// if the normal size of the image is 50x100 then double size for retina (25x50).
+					scaledSize: new google.maps.Size(50, 150)
+				  };
 				
                 var marker = new google.maps.Marker({
                     position: latlng,
                     map: this.map,
 					draggable:false,
-                    title: model.get('name')
+                    title: model.get('name'),
+					animation: google.maps.Animation.DROP,
+					icon: image
                 });
-				var infowindow = new google.maps.InfoWindow({
-					content: model.get('name')
+				var infoWindow = new google.maps.InfoWindow({
+					content: '<div><label>'+ model.get('name') + '</label>' + imageHTML + '</div>'
 				});
 				
+				this.infoWindows.push(infoWindow); 
+				
 				google.maps.event.addListener(marker, 'click', function() {
-					infowindow.open(this.map,marker);
+					infoWindow.open(this.map,marker);
 				});
+				
+				return marker;
             }
         });
 
@@ -334,6 +353,7 @@ define(
 		
         // app init
         $(function(){
+			var retina = window.devicePixelRatio > 1;
 			var defaultMapData = new defaultMapDataModel();
             var dataCollection = new placeCollection();
             var navigation = responsiveNav('.nav-collapse');
@@ -343,8 +363,9 @@ define(
 				var mapview = new mapView({
 					mapData: defaultMapData,
 					collection: dataCollection,
-					el: 'div#map-canvas'
-					//inputField: '#searchTextField'
+					el: 'div#map-canvas',
+					retina: retina,
+					inputField: '#searchTextField'//
 				});
 
 				var regionlistview = new regionListView({

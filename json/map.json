@@ -1,8 +1,9 @@
 {
   "default_map_data": {
-	"lat": 40,
-	"lng": 34,
-	"zoom": 2
+	"lat": 25,
+	"lng": 62,
+	"zoom": 2,
+	"marker_icon": "img/sprite.png"
   },
   "regions": [
     {
@@ -17,11 +18,11 @@
           "lat": "-33.8688",
           "lng": "151.2195",
           "time_of_first_arrival": "2002/04",
-          "image": "",
+          "image": "img/places/sydney.jpg",
           "selected": false,
           "zoom":  11
         },
-		{
+		    {
           "name": "Wollongong",
           "lat": "-34.426581",
           "lng": "150.888140",
@@ -71,7 +72,7 @@
           "lat": "-37.8149",
           "lng": "144.9588",
           "time_of_first_arrival": "2010/09",
-          "image": "",
+          "image": "img/places/melbourne.jpg",
           "selected": false,
           "zoom":  11
         },
@@ -98,7 +99,7 @@
           "lat": "-31.439734",
           "lng": "152.903724",
           "time_of_first_arrival": "2014/12",
-          "image": "",
+          "image": "img/places/port_macquarie.jpg",
           "selected": false,
           "zoom": 13
         }
@@ -116,7 +117,7 @@
           "lat": "48.85661",
           "lng": "2.35222",
           "time_of_first_arrival": "2012/01",
-          "image": "",
+          "image": "img/places/paris.jpg",
           "selected": false,
           "zoom":  11
         }
@@ -134,7 +135,7 @@
           "lat": "41.89292",
           "lng": "12.48252",
           "time_of_first_arrival": "2012/01",
-          "image": "",
+          "image": "img/places/rome.jpg",
           "selected": false,
           "zoom":  11
         },
@@ -170,7 +171,7 @@
           "lat": "41.903596",
 		  "lng": "12.453446",
           "time_of_first_arrival": "2012/01",
-          "image": "",
+          "image": "img/places/vatican.jpg",
           "selected": false,
           "zoom": 16
         }
@@ -188,7 +189,7 @@
           "lat": "35.68949",
           "lng": "139.69171",
           "time_of_first_arrival": "2014/11",
-          "image": "",
+          "image": "img/places/tokyo.jpg",
           "selected": false,
           "zoom":  11
         },
@@ -206,7 +207,7 @@
           "lat": "35.01164",
           "lng": "135.76803",
           "time_of_first_arrival": "2014/11",
-          "image": "",
+          "image": "img/places/kyoto.jpg",
           "selected": false,
           "zoom":  12
         },
