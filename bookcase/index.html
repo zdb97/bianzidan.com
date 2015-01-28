@@ -22,16 +22,9 @@
 
 		<fieldset id="control-panel" class="row">
 			<legend><strong>Book Case Control Panel</strong></legend>
-			<div class="sort-shelf columns large-4 small-12">
-				<label>organize shelves by genre</label>
-				<select class="organize">
-					<option selected="selected" value="0">--select--</option>
-					<option value="asc">ascending order</option>
-					<option value="desc">descending order</option>
-				</select>
-			</div>
-			<div class="add-book columns large-4 small-12">
-				<label>add book</label>
+		
+			<div class="add-book columns large-6 small-12">
+				<label>add a book</label>
 				<input type="text" placeholder="title" class="title" id="add-book-title" />
 				<input type="text" placeholder="ISBN" class="isbn" />
 				<input type="text" placeholder="author" class="author" />
@@ -46,14 +39,24 @@
 				<input type="button" value="ADD" class="add-book-button" />
 				<span class="msg"></span>
 			</div>
-			<div class="remove-book columns large-4 small-12">
-				<label>remove book</label>
-				<!-- backbone to populate the values -->
-				<select class="book-to-remove">
-					<option value="" selected="selected">--select ISBN--</option>
-				</select>
-				<input type="button" value="REMOVE" class="remove-book-button" />
-				<span class="msg"></span>
+			<div class="columns large-6 small-12">
+				<div class="sort-shelf">
+					<label>organize shelves by genre</label>
+					<select class="organize">
+						<option selected="selected" value="0">--select--</option>
+						<option value="asc">ascending order</option>
+						<option value="desc">descending order</option>
+					</select>
+				</div>
+				<div class="remove-book">
+					<label>remove book</label>
+					<!-- backbone to populate the values -->
+					<select class="book-to-remove">
+						<option value="" selected="selected">--select ISBN--</option>
+					</select>
+					<input type="button" value="REMOVE" class="remove-book-button" />
+					<span class="msg"></span>
+				</div>
 			</div>
 		</fieldset> 
 
@@ -77,7 +80,7 @@
  					if (books[i].shelf === this.shelfId) { 
 	 			%>
 					<li class="book" genre="<%=books[i].genre%>" isbn="<%= books[i].isbn %>" id="book-<%= books[i].isbn %>" >
-						<a href="#" draggable="true">
+						<a draggable="true">
 							<p><strong>title: </strong><%= books[i].title %></p>	
 							<p><strong>isbn: </strong><%= books[i].isbn %></p>
 							<p><strong>author: </strong><%= books[i].author %></p>

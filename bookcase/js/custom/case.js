@@ -108,6 +108,19 @@ $(function () {
 
 				//self.genres.create({'genre': genre}); 		// zidan added
 			});
+		},
+		
+		/*
+		 * change a model's position within the collection
+		 */
+		rePosition: function (selectedBook, firstBookOfNewShelf, shelfId) {
+			if (selectedBook !== firstBookOfNewShelf) {
+				var clone = selectedBook.clone();
+				clone.changeShelf(shelfId);
+				
+				this.remove(selectedBook);
+				this.add(clone, {at: this.indexOf(firstBookOfNewShelf)});
+			}
 		}
 	});
 	 
@@ -118,6 +131,7 @@ $(function () {
 		defaults: {
 			title: '',
 			id: ''
+			//noOfBooks: 0
 		},
 		
 		initialize: function () {   
@@ -154,7 +168,7 @@ $(function () {
 		 
 		parse: function (response) {
  			var shelves = _.map(response.bookcase, function (item) { 
- 				return {'title': item.title, 'id': item.id};
+ 				return {'title': item.title, 'id': item.id, /*'noOfBooks': item.books.length*/};
  			});
 
 			return shelves;
@@ -189,12 +203,13 @@ $(function () {
 	 
 	 
 	/*
-	 * book view
+	 * books view (actually, it should be shelf books view.)
 	 */
 	 var BooksView = Backbone.View.extend({
 	 	
 	 	events: {
  			'dragstart li.book a': 'dragBookStart',
+			'dragend  li.book a': 'dragBookEnd',
  			'drop ol': 'dropBook',
 			'dragover ol': 'dragBookOver',
 			'dragenter ol': 'dragBookOver'	//for IE
@@ -220,7 +235,7 @@ $(function () {
 			var booksObj = {'books': this.books.toJSON()};
 			var html = this.template(booksObj); 
 			this.$el.append(html);
-
+			
 			return this;
 		},
 
@@ -229,6 +244,14 @@ $(function () {
 		*/
 		dragBookStart: function (e) {
 			e.originalEvent.dataTransfer.setData('text', $(e.target).parent().attr('id'));
+			$(e.target).addClass('moving');
+		},
+		
+		/*
+		 * handle ondragend event
+		 */
+		 dragBookEnd: function (e) {
+			$(e.target).removeClass('moving');
 		},
 
 		/*
@@ -237,21 +260,17 @@ $(function () {
 		dropBook: function (e) {
 			e.preventDefault(); 
 			
-			var data = e.originalEvent.dataTransfer.getData('text');
-
-			var data = e.originalEvent.dataTransfer.getData('text');
-
-			if(e.originalEvent.target.localName !== 'ol') {
-				$(this.el).find('ol').append($('#' + data));	
-			}
-			else {
-				$(e.originalEvent.target).append($('#' + data));	
-			}
-
+			var data = e.originalEvent.dataTransfer.getData('text');	
 			var $selectedBook = $(document.getElementById(data));
-			var selectedBookModel = this.books.findWhere({isbn: $selectedBook.attr('isbn')});
-		
-			selectedBookModel.changeShelf(this.shelfId);
+			var selectedBook = this.books.findWhere({isbn: $selectedBook.attr('isbn')});
+			var firstBookOfNewShelf = this.books.findWhere({shelf: this.shelfId});
+
+			//$selectedBook.find('a').removeClass('moving');
+
+			// no book order change within same shelf
+			if (selectedBook.get('shelf') !== this.shelfId) {
+				this.books.rePosition(selectedBook, firstBookOfNewShelf, this.shelfId);
+			}
 		},
 
 		/*
@@ -395,9 +414,12 @@ $(function () {
 				var duplicateISBN = this.books.where({isbn: $.trim($isbn.val())});
 				// if the isbn entered is already in the collection, do not add 
 				if (duplicateISBN.length > 0) {
-					$msg.html('error, duplicate isbn.');
+					$msg.html('error, duplicate isbn.').show().fadeOut(1500);
 					return;
 				}
+				
+				//get position/index to add
+				var firstBookOfShelf = this.books.findWhere({shelf: $.trim($shelf.val())});
 				
 				// add book model to book collection
 				this.books.add({
@@ -406,12 +428,12 @@ $(function () {
 					'author': $.trim($author.val()),
 					'genre': $.trim($genre.val()),
 					'shelf': $.trim($shelf.val())
-				});
+				}, {at: this.books.indexOf(firstBookOfShelf)});
 				
-				$msg.html('new book added.').fadeOut(3000);
+				$msg.html('new book added.').show().fadeOut(1500);
 			}
 			else {
-				$msg.html('error, please fill all fields.');
+				$msg.html('error, please fill all fields.').show().fadeOut(1500);
 			}
 		},
 		
@@ -422,10 +444,10 @@ $(function () {
 			if ($.trim($book.val()).length !== 0) { 
 				var bookToRemove = this.books.where({isbn: $.trim($book.val())}); 
 				this.books.remove(bookToRemove);
-				$msg.html('selected book is removed.').fadeOut(3000);
+				$msg.html('selected book is removed.').show().fadeOut(1500);
 			}
 			else {
-				$msg.html('please make a selection.');
+				$msg.html('please make a selection.').show().fadeOut(1500);;
 			}
 		}
 	});
