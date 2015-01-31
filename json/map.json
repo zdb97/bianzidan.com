@@ -144,7 +144,7 @@
           "lat": "43.77103",
           "lng": "11.24800",
           "time_of_first_arrival": "2012/01",
-          "image": "",
+          "image": "img/places/florence.jpg",
           "selected": false,
           "zoom":  11
         },
@@ -153,7 +153,7 @@
           "lat": "45.46545",
           "lng": "9.18652",
           "time_of_first_arrival": "2012/01",
-          "image": "",
+          "image": "img/places/milan.jpg",
           "selected": false,
           "zoom":  11
         }
@@ -198,7 +198,7 @@
           "lat": "35.23236",
           "lng": "139.10694",
           "time_of_first_arrival": "2014/11",
-          "image": "",
+          "image": "img/places/hakone.jpg",
           "selected": false,
           "zoom":  12
         },
@@ -216,7 +216,7 @@
           "lat": "34.69374",
           "lng": "135.50217",
           "time_of_first_arrival": "2014/11",
-          "image": "",
+          "image": "img/places/osaka.jpg",
           "selected": false,
           "zoom":  12
         }
@@ -234,7 +234,7 @@
           "lat": "1.27989",
           "lng": "103.84621",
           "time_of_first_arrival": "2012/10",
-          "image": "",
+          "image": "img/places/singapore.jpg",
           "selected": false,
           "zoom": 13
         }
@@ -270,7 +270,7 @@
           "lat": "25.09108",
           "lng": "121.55983",
           "time_of_first_arrival": "2013/12",
-          "image": "",
+          "image": "img/places/taipei.jpg",
           "selected": false,
           "zoom":  13
         }
