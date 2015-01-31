@@ -27,7 +27,7 @@
           "lat": "-34.426581",
           "lng": "150.888140",
           "time_of_first_arrival": "2003/07",
-          "image": "",
+          "image": "img/places/wollongong.jpg",
           "selected": false,
           "zoom":  12
         },
@@ -54,7 +54,7 @@
           "lat": "-28.01726",
           "lng": "153.42570",
           "time_of_first_arrival": "2007/01",
-          "image": "",
+          "image": "img/places/gold coast.jpg",
           "selected": false,
           "zoom":  12
         },
@@ -90,7 +90,7 @@
           "lat": "-41.36504",
           "lng": "146.62849",
           "time_of_first_arrival": "2014/02",
-          "image": "",
+          "image": "img/places/tasmania.jpg",
           "selected": false,
           "zoom": 8
         },
@@ -252,7 +252,7 @@
           "lat": "22.27925",
           "lng": "114.17404",
           "time_of_first_arrival": "2006/02",
-          "image": "",
+          "image": "img/places/hong kong.jpg",
           "selected": false,
           "zoom": 13
         }
