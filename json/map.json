@@ -1,8 +1,9 @@
 {
   "default_map_data": {
-	"lat": 40,
-	"lng": 34,
-	"zoom": 2
+	"lat": 25,
+	"lng": 62,
+	"zoom": 2,
+	"marker_icon": "img/sprite.png"
   },
   "regions": [
     {
@@ -17,16 +18,16 @@
           "lat": "-33.8688",
           "lng": "151.2195",
           "time_of_first_arrival": "2002/04",
-          "image": "",
+          "image": "img/places/sydney.jpg",
           "selected": false,
           "zoom":  11
         },
-		{
+		    {
           "name": "Wollongong",
           "lat": "-34.426581",
           "lng": "150.888140",
           "time_of_first_arrival": "2003/07",
-          "image": "",
+          "image": "img/places/wollongong.jpg",
           "selected": false,
           "zoom":  12
         },
@@ -53,7 +54,7 @@
           "lat": "-28.01726",
           "lng": "153.42570",
           "time_of_first_arrival": "2007/01",
-          "image": "",
+          "image": "img/places/gold coast.jpg",
           "selected": false,
           "zoom":  12
         },
@@ -71,7 +72,7 @@
           "lat": "-37.8149",
           "lng": "144.9588",
           "time_of_first_arrival": "2010/09",
-          "image": "",
+          "image": "img/places/melbourne.jpg",
           "selected": false,
           "zoom":  11
         },
@@ -89,7 +90,7 @@
           "lat": "-41.36504",
           "lng": "146.62849",
           "time_of_first_arrival": "2014/02",
-          "image": "",
+          "image": "img/places/tasmania.jpg",
           "selected": false,
           "zoom": 8
         },
@@ -98,7 +99,7 @@
           "lat": "-31.439734",
           "lng": "152.903724",
           "time_of_first_arrival": "2014/12",
-          "image": "",
+          "image": "img/places/port_macquarie.jpg",
           "selected": false,
           "zoom": 13
         }
@@ -116,7 +117,7 @@
           "lat": "48.85661",
           "lng": "2.35222",
           "time_of_first_arrival": "2012/01",
-          "image": "",
+          "image": "img/places/paris.jpg",
           "selected": false,
           "zoom":  11
         }
@@ -134,7 +135,7 @@
           "lat": "41.89292",
           "lng": "12.48252",
           "time_of_first_arrival": "2012/01",
-          "image": "",
+          "image": "img/places/rome.jpg",
           "selected": false,
           "zoom":  11
         },
@@ -143,7 +144,7 @@
           "lat": "43.77103",
           "lng": "11.24800",
           "time_of_first_arrival": "2012/01",
-          "image": "",
+          "image": "img/places/florence.jpg",
           "selected": false,
           "zoom":  11
         },
@@ -152,7 +153,7 @@
           "lat": "45.46545",
           "lng": "9.18652",
           "time_of_first_arrival": "2012/01",
-          "image": "",
+          "image": "img/places/milan.jpg",
           "selected": false,
           "zoom":  11
         }
@@ -170,7 +171,7 @@
           "lat": "41.903596",
 		  "lng": "12.453446",
           "time_of_first_arrival": "2012/01",
-          "image": "",
+          "image": "img/places/vatican.jpg",
           "selected": false,
           "zoom": 16
         }
@@ -188,7 +189,7 @@
           "lat": "35.68949",
           "lng": "139.69171",
           "time_of_first_arrival": "2014/11",
-          "image": "",
+          "image": "img/places/tokyo.jpg",
           "selected": false,
           "zoom":  11
         },
@@ -197,7 +198,7 @@
           "lat": "35.23236",
           "lng": "139.10694",
           "time_of_first_arrival": "2014/11",
-          "image": "",
+          "image": "img/places/hakone.jpg",
           "selected": false,
           "zoom":  12
         },
@@ -206,7 +207,7 @@
           "lat": "35.01164",
           "lng": "135.76803",
           "time_of_first_arrival": "2014/11",
-          "image": "",
+          "image": "img/places/kyoto.jpg",
           "selected": false,
           "zoom":  12
         },
@@ -215,7 +216,7 @@
           "lat": "34.69374",
           "lng": "135.50217",
           "time_of_first_arrival": "2014/11",
-          "image": "",
+          "image": "img/places/osaka.jpg",
           "selected": false,
           "zoom":  12
         }
@@ -233,7 +234,7 @@
           "lat": "1.27989",
           "lng": "103.84621",
           "time_of_first_arrival": "2012/10",
-          "image": "",
+          "image": "img/places/singapore.jpg",
           "selected": false,
           "zoom": 13
         }
@@ -251,7 +252,7 @@
           "lat": "22.27925",
           "lng": "114.17404",
           "time_of_first_arrival": "2006/02",
-          "image": "",
+          "image": "img/places/hong kong.jpg",
           "selected": false,
           "zoom": 13
         }
@@ -269,7 +270,7 @@
           "lat": "25.09108",
           "lng": "121.55983",
           "time_of_first_arrival": "2013/12",
-          "image": "",
+          "image": "img/places/taipei.jpg",
           "selected": false,
           "zoom":  13
         }
