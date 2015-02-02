@@ -1,0 +1,137 @@
+html#map {
+	height: 100%;
+}
+
+.bodyMap {
+	padding: 5px 0 0;
+	height: 100%;
+
+	.full-width {
+		max-width: 100% !important;
+	}
+	.row {
+		&.main-row {
+			height: 90%;	
+		}
+	}
+	.accordion {
+	 	.accordion-navigation {
+	 		.accordion-item {
+				text-transform: uppercase;
+				margin-bottom: 1px;
+				padding: 0.5rem;
+				font-weight: 700;
+				font-size: 0.75rem;
+				font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
+			}
+		}
+		#back-to-full-map {
+			background:dodgerblue;
+			color: #fff;
+		}
+	}
+	.place-list {
+		height: 100%;
+		overflow: auto;
+
+		li {
+			display: inline-block;
+			padding: 3px 15px;
+			font-size: 75%;
+
+			a {
+				&.city {
+					font-weight: 700;
+					text-transform: uppercase;
+					text-decoration: underline;
+					display: block;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	.map-canvas {
+		height: 100%;	
+
+		img {
+			max-width : none;
+		
+			&.place-image {
+				height: 100px;
+				width: 150px;
+			}
+		}
+		.wheel {
+			position: absolute;
+			background: url(../img/loading.gif) 0 0 transparent;
+			height: 207px;
+			width: 207px;
+			top: 50%;
+			left: 50%;
+			margin-top: -103px;
+			margin-left: -103px;
+		}
+
+	}
+}
+ 
+@media only screen and (max-width: 64.063rem) {	// 1024px
+	.bodyMap {
+		.place-list {
+			height: auto;
+
+		 	li {
+				&.columns {
+					:last-child {
+						float: left;
+					}
+				}
+			}
+		}
+	}
+} 
+
+@media only screen and (max-width: 40.063rem) {	// 640px
+	.bodyMap { 
+		.accordion {
+			.accordion-navigation {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+		.map-canvas {
+			max-height: 300px;
+		}
+		.place-list {
+
+			li {
+				padding: 1px 15px;
+			}
+			/* temp */
+			[class*="column"]+[class*="column"]:last-child {
+				float: left;
+			}
+		}
+	}
+}
+
+/* for retina display */
+@media only screen and (min--moz-device-pixel-ratio: 2),
+	only screen and (-o-min-device-pixel-ratio: 2/1),
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	/*.nav-toggle {
+		background: url("../img/sprite.png") no-repeat scroll 0 -12px dodgerblue;
+		height: 28px;
+		background-size: 50% 50%;
+	}*/
+	#map-canvas .place-image {
+		height: 50px;
+		width: 75px;
+	}
+}
+ 
