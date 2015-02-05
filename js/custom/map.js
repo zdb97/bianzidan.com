@@ -186,15 +186,24 @@ define(
 				var thisObj = e.target;
 				var collapseClass = 'fi-arrow-right';
 				var expendClass = 'fi-arrow-down';
+				var collapseTitle = 'click/tap to expend';
+				var expendTitle = 'click/tap to collapse';
 				
 				if ($('#back-to-full-map').get(0) !== thisObj) {
 					if ($(thisObj).hasClass(collapseClass)) {
+						$('.' + expendClass).attr('title', collapseTitle);
 						$('.' + expendClass).addClass(collapseClass).removeClass(expendClass);
 						$(thisObj).addClass(expendClass).removeClass(collapseClass);
+						$(thisObj).attr('title', expendTitle);
 					}
 					else {
-						$(thisObj).addClass(collapseClass).removeClass(expend);
+						$(thisObj).addClass(collapseClass).removeClass(expendClass);
+						$(thisObj).attr('title', collapseTitle);
 					}
+				}
+				else {
+					$('.' + expendClass).attr('title', collapseTitle);
+					$('.' + expendClass).addClass(collapseClass).removeClass(expendClass);
 				}
 			}
         });
