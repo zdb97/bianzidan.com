@@ -1,8 +1,19 @@
 map todo:
 
 1. map marker							[DONE]
-2. responsive css with foundation
+2. responsive css with foundation		[DONE]
 3. optimize loading / cdn				[DONE]
-4. list item image
-5. require.js
-6. info box
+4. list item image						[DONE]
+5. require.js							[DONE]
+6. info box								[DONE]
+7. parallex scroll (homepage)
+8. homepage dragging CV (pdf/doc)
+9. some chart with js (cv skill analysis)
+
+
+. add map.css into git repo
+
+
+
+
+

@@ -1,11 +1,11 @@
 define(
 	[
-		"jquery", 
-		"masonry"
+		'masonry',
+		'responsivenav',
+		'scrollto'
 	], 
-	function($, masonry) { 	
-	//	$(function () {
-			console.log("testsss");
+	function(masonry, responsiveNav, scrollTo) { 	
+		$(function() {
 			
 			/*
 			var container = document.querySelector('.employment-history');
@@ -16,14 +16,18 @@ define(
 			});
 			*/
 			
+			
+			/*
 			var $container = $('.employment-history');
 		 
 			$container.masonry({
 				columnWidth: 1,
 				itemSelector: '.role',
 				isAnimated: true
-			});
-	//	});
+			});*/
+			
+			var navigation = responsiveNav(".nav-collapse");
+		});
 		 
 	}
 );

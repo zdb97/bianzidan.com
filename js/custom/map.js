@@ -127,7 +127,8 @@ define(
             template: _.template($('#region-template').html()),
 
             events: {
-				'click #back-to-full-map': 'fullMapClick'
+				'click #back-to-full-map': 'fullMapClick',
+				'click .accordion-item': 'toggleAccordion'
             },
 
             initialize: function(options) {
@@ -137,12 +138,13 @@ define(
 				this.map = options.map;
                 this.el = options.el;
                 this.render();
+				
             },
 
             render: function() {
                 var self = this;
                 self.addRegionDataToTemplate();
-
+				
                 return this;
             },
 
@@ -178,6 +180,31 @@ define(
                 this.map.renderDefaultMap();
 
                 $('#map-canvas').ScrollTo();
+			},
+			// TODO: make region a collection then change the view based on model change
+			toggleAccordion: function (e) {
+				var thisObj = e.target;
+				var collapseClass = 'fi-arrow-right';
+				var expendClass = 'fi-arrow-down';
+				var collapseTitle = 'click/tap to expend';
+				var expendTitle = 'click/tap to collapse';
+				
+				if ($('#back-to-full-map').get(0) !== thisObj) {
+					if ($(thisObj).hasClass(collapseClass)) {
+						$('.' + expendClass).attr('title', collapseTitle);
+						$('.' + expendClass).addClass(collapseClass).removeClass(expendClass);
+						$(thisObj).addClass(expendClass).removeClass(collapseClass);
+						$(thisObj).attr('title', expendTitle);
+					}
+					else {
+						$(thisObj).addClass(collapseClass).removeClass(expendClass);
+						$(thisObj).attr('title', collapseTitle);
+					}
+				}
+				else {
+					$('.' + expendClass).attr('title', collapseTitle);
+					$('.' + expendClass).addClass(collapseClass).removeClass(expendClass);
+				}
 			}
         });
 
@@ -203,7 +230,7 @@ define(
             render: function() {
                 var self = this;
                 self.addCollectionDataToTemplate();
-
+				 
                 return this;
             },
 

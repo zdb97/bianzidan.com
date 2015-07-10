@@ -11,7 +11,7 @@
 		<meta name="author" content="Zidan Bian. 卞紫丹" />
 
 		<!-- FIXME: foundation css to be loaded from gem / bower -->
-		<link href="css/foundation5.min.css" rel="stylesheet" type="text/css" />		
+		<link href="css/foundation5.min.css" rel="stylesheet" type="text/css" />	
 		<link href="css/map.css?v=1.0" rel="stylesheet" type="text/css" /> 
 		<script src="js/lib/require.js"></script> 	
 		<script>
@@ -76,7 +76,7 @@
 
 		<script type="text/html" id="region-template">
 			<dd class="accordion-navigation large-12 medium-12 small-12 columns region" data-region="<%= region_id %>">
-				<a class="accordion-item" href="#panel-<%= region_id %>"><%= region %></a>
+				<a class="accordion-item fi-arrow-right" title="click/tap to expend" href="#panel-<%= region_id %>"><%= region %></a>
 				<div id="panel-<%= region_id %>" class="content columns large-12 medium-12 small-12">
 					<ul class="place-list place-list-<%= region_id %> row">
 						<!-- backbone template -->
