@@ -106,6 +106,51 @@
       ]
     },
     {
+      "name": "new zealand",
+      "id": "nz",
+      "lat": "-40.900557",
+      "lng": "174.885971",
+      "zoom": 6,
+       "places": [
+        {
+          "name": "Auckland",
+          "lat": "-36.8484597",
+          "lng": "174.7633315",
+          "time_of_first_arrival": "2015/09",
+          "image": "",
+          "selected": false,
+          "zoom":  12
+        },
+		{
+          "name": "Hamilton",
+          "lat": "-37.7870012",
+          "lng": "175.279253",
+          "time_of_first_arrival": "2015/09",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        },
+		{
+          "name": "Rotorua",
+          "lat": "-38.1368478",
+          "lng": "176.2497461",
+          "time_of_first_arrival": "2015/09",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        },
+		{
+          "name": "Taupo",
+          "lat": "-38.6856924",
+          "lng": "176.0702098",
+          "time_of_first_arrival": "2015/09",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        }
+      ]
+    },
+	{
       "name": "france",
       "id": "fr",
       "lat": "46.567772",
@@ -258,13 +303,13 @@
         }
       ]
     },
-    {
+   {
       "name": "taiwan",
       "id": "tw",
       "lat": "23.731758",
       "lng": "121.026596",
       "zoom": 8,
-      "places": [
+       "places": [
         {
           "name": "Taipei",
           "lat": "25.09108",
