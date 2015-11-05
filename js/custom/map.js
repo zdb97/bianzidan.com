@@ -5,6 +5,7 @@ define(
         'backbone',
         'responsivenav',
         'modernizr',
+		'mapStyling',
         'foundation',
         'accordion',
         'scrollto',
@@ -51,7 +52,7 @@ define(
                 console.log('placeModel initialized: ', this.toJSON());
             }
         });
-
+		
         /*
         * place collection
         */
@@ -296,11 +297,12 @@ define(
 					center: new google.maps.LatLng(this.mapData.get('lat'), this.mapData.get('lng')),
                     zoom: this.mapData.get('zoom'),
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
+					styles: mapStyling[1],
 					panControl: false
                 };
 				//initialize google map
 				this.map = new google.maps.Map(this.$el.get(0), mapOptions);
-				
+								
 				_.each(this.collection.models, function(model, index) {
 					// add location to map
 					self.markers.push(self.addMarkerToMap(model));

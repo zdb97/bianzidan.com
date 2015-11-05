@@ -26,6 +26,7 @@ require.config({
 		
 		// internal js
 		index: "custom/index",
+		mapStyling: "custom/map-styling",
 		map: "custom/map",
 		resume: "custom/resume"
 		
