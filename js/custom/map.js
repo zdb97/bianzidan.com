@@ -8,8 +8,7 @@ define(
 		'mapStyling',
         'foundation',
         'accordion',
-        'scrollto',
-        'async!//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places'
+        'scrollto',        'async!//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&key=AIzaSyDxEoEo9pRIoAA7Cv92HW32vvIAWPnQewE&signed_in=true'
     ],
 
     function($, _, Backbone, responsiveNav, Modernizr, foundation, accordion, scrollTo) {
@@ -281,7 +280,7 @@ define(
                 this.collection = options.collection;
                 this.el = options.el;
 				this.retina = options.retina;
-                this.inputField = options.inputField;//
+                this.inputField = options.inputField; //
 				this.map = null;
 				this.markers = [];
 				this.infoWindows = [];
@@ -297,7 +296,7 @@ define(
 					center: new google.maps.LatLng(this.mapData.get('lat'), this.mapData.get('lng')),
                     zoom: this.mapData.get('zoom'),
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
-					styles: mapStyling[1],
+					styles: mapStyling[3],
 					panControl: false
                 };
 				//initialize google map
@@ -309,19 +308,28 @@ define(
 				});
 				
 				// google auto complete
-                /*
-                var input = $(this.inputField).get(0);
-                var autocompleteOptions = {
-                    types: ['(cities)'],
-                    componentRestrictions: {country: 'au'}
-                };            
-
-                var autocomplete = new google.maps.places.Autocomplete(input, autocompleteOptions);
-
-                //autocomplete.bindTo('bounds', map);
-                google.maps.event.addListener(autocomplete, 'place_changed', this.changeLocation);
-                */
+				var input = $(this.inputField).get(0);
+				var autocomplete = new google.maps.places.Autocomplete(input);
 				
+				this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+				autocomplete.bindTo('bounds', this.map);
+				google.maps.event.addListener(autocomplete, 'place_changed', function(e){
+					var place = autocomplete.getPlace();
+					
+					if (!place.geometry) {
+						window.alert("Autocomplete's returned place contains no geometry");
+						return;
+					}
+					
+					// If the place has a geometry, then present it on a map.
+					if (place.geometry.viewport) {
+						self.map.fitBounds(place.geometry.viewport);
+					} else {
+						self.map.setCenter(place.geometry.location);
+						self.map.setZoom(17);
+					}
+				});
+                
 				return this;
 			},
 			
@@ -394,7 +402,7 @@ define(
 					collection: dataCollection,
 					el: 'div#map-canvas',
 					retina: retina,
-					inputField: '#searchTextField'//
+					inputField: '#searchTextField' //
 				});
 
 				var regionlistview = new regionListView({

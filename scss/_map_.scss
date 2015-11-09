@@ -82,7 +82,13 @@ html#map {
 			margin-top: -103px;
 			margin-left: -103px;
 		}
-
+		#searchTextField {
+			text-overflow: ellipsis;
+			padding: 0 5px;
+			width: 200px;
+			font-family: Amble-Light, Cambria, Georgia, 'Times New Roman', Times, serif;
+			margin-top: 9px;
+		}
 	}
 }
  
