@@ -14,22 +14,27 @@ html#map {
 			height: 90%;	
 		}
 	}
+	
+	.nav-collapse {
+		z-index: 11;
+	}
+	
 	.accordion {
 	 	.accordion-navigation {
 	 		.accordion-item {
 				&.fi-arrow-right, &.fi-arrow-down {
 					&:before {
 						float: right;
-						font-size: 14px;
+						font-size: 0.625rem;
 						padding-top: 3px;
 					}
 				}
 			
 				text-transform: uppercase;
 				margin-bottom: 1px;
-				padding: 0.5rem;
+				padding: 5px;
 				font-weight: 700;
-				font-size: 0.75rem;
+				font-size: 0.625rem;
 				font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
 			}
 		}
@@ -38,14 +43,24 @@ html#map {
 			color: #fff;
 		}
 	}
+	
+	.region-list {
+		position: absolute;
+		width: 200px;
+		z-index: 10;
+		float: right;
+		right: 0px;
+		top: 76px;
+	}
+	
 	.place-list {
 		height: 100%;
 		overflow: auto;
 
 		li {
 			display: inline-block;
-			padding: 3px 15px;
-			font-size: 75%;
+			padding: 3px 5px;
+			font-size: 0.625rem;
 
 			a {
 				&.city {
@@ -63,6 +78,10 @@ html#map {
 	}
 	.map-canvas {
 		height: 100%;	
+		position: absolute;
+		top: 76px;
+		left: 0;
+		z-index: 1;
 
 		img {
 			max-width : none;
@@ -116,13 +135,20 @@ html#map {
 				padding-right: 0;
 			}
 		}
+		.region-list { 
+			top: 110px;
+			left: 11px;
+			margin-right: 0;
+			
+		}
 		.map-canvas {
-			max-height: 300px;
+			top: 60px;	
+			/*max-height: 300px;*/
 		}
 		.place-list {
 
 			li {
-				padding: 1px 15px;
+				padding: 1px 5px;
 			}
 			/* temp */
 			[class*="column"]+[class*="column"]:last-child {

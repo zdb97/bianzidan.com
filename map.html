@@ -41,32 +41,28 @@
 		  </ul>
 		</nav>
 		
-		
-	
-					
-		<!-- TODO: search field -->
+		<!-- search field -->
 		<div class="row full-width" style="display:none;">	
 			<div class="columns large-12 small-12">
 				<input id="searchTextField" type="text" placeholder="Enter a location">
 			</div>
 		</div>
-		<!-- TODO: search field -->
 		
 		<div class="row full-width main-row">			
 		
 
 			<!-- region list -->
-			<div class="columns large-3 medium-3 small-12">
-				<dl class="accordion row region-list" data-accordion>
-					<dd class="accordion-navigation large-12 medium-12 small-12 columns">
-						<a class="accordion-item" id="back-to-full-map">Full map</a>
-					</dd>
-					<!-- backbone template -->
-				</dl>
-			</div>
+			 
+			<dl class="accordion row region-list columns" data-accordion>
+				<dd class="accordion-navigation large-12 medium-12 small-12 columns">
+					<a class="accordion-item" id="back-to-full-map">Full map</a>
+				</dd>
+				<!-- backbone template -->
+			</dl>
+			 
 
 			<!-- map canvas -->
-			<div id="map-canvas" class="map-canvas columns large-9 medium-9 small-12">
+			<div id="map-canvas" class="map-canvas columns">
 				<div class="wheel"></div>
 			</div> 
 		</div>
