@@ -50,12 +50,13 @@
 		
 		<div class="row full-width main-row">			
 		
-
 			<!-- region list -->
-			 
 			<dl class="accordion row region-list columns" data-accordion>
-				<dd class="accordion-navigation large-12 medium-12 small-12 columns">
-					<a class="accordion-item" id="back-to-full-map">Full map</a>
+				<dd class="columns">
+					<a class="accordion-item" id="toggle-menu">Show/Hide list</a>
+				</dd>
+				<dd class="accordion-navigation columns">
+					<a class="accordion-item" id="back-to-full-map">View full map</a>
 				</dd>
 				<!-- backbone template -->
 			</dl>
@@ -69,9 +70,9 @@
 		
 
 		<script type="text/html" id="region-template">
-			<dd class="accordion-navigation large-12 medium-12 small-12 columns region" data-region="<%= region_id %>">
+			<dd class="accordion-navigation columns region" data-region="<%= region_id %>">
 				<a class="accordion-item fi-arrow-right" title="click/tap to expend" href="#panel-<%= region_id %>"><%= region %></a>
-				<div id="panel-<%= region_id %>" class="content columns large-12 medium-12 small-12">
+				<div id="panel-<%= region_id %>" class="content columns region-panel">
 					<ul class="place-list place-list-<%= region_id %> row">
 						<!-- backbone template -->
 					</ul>
@@ -80,7 +81,7 @@
 		</script> 
 
 		<script type="text/html" id="place-template">
-			<li class="large-12 medium-12 small-6 columns place">
+			<li class="columns place">
 				<a title="<%= time_of_first_arrival %>" class="city map-link" index=<%=index %>><%= name %></a>
 			</li>
 		</script> 

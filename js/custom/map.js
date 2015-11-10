@@ -128,6 +128,7 @@ define(
 
             events: {
 				'click #back-to-full-map': 'fullMapClick',
+				'click #toggle-menu': 'menuToggleClick',
 				'click .accordion-item': 'toggleAccordion'
             },
 
@@ -206,6 +207,10 @@ define(
 					$('.' + expendClass).attr('title', collapseTitle);
 					$('.' + expendClass).addClass(collapseClass).removeClass(expendClass);
 				}
+			},
+			
+			menuToggleClick: function (e) {
+				this.$el.find('.accordion-navigation').toggle();
 			}
         });
 

@@ -38,6 +38,19 @@ html#map {
 				font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
 			}
 		}
+		#toggle-menu {
+			text-decoration: none;
+			text-transform: uppercase;
+			margin-bottom: 1px;
+			padding: 5px;
+			font-weight: 700;
+			font-size: 0.625rem;
+			font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
+			
+			&:before { 
+				content: none;
+			}
+		}
 		#back-to-full-map {
 			background:dodgerblue;
 			color: #fff;
@@ -130,23 +143,29 @@ html#map {
 @media only screen and (max-width: 40.063rem) {	// 640px
 	.bodyMap { 
 		.accordion {
-			.accordion-navigation {
+			dd {
 				padding-left: 0;
 				padding-right: 0;
+				
+				.accordion-item {
+					padding: 2px 5px;
+				}
+				.region-panel {
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
 			}
 		}
 		.region-list { 
 			top: 110px;
 			left: 11px;
 			margin-right: 0;
-			
+			width: 150px;
 		}
 		.map-canvas {
-			top: 60px;	
-			/*max-height: 300px;*/
+			top: 60px;
 		}
 		.place-list {
-
 			li {
 				padding: 1px 5px;
 			}
