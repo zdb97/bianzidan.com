@@ -8,7 +8,7 @@ define(
 		'mapStyling',
         'foundation',
         'accordion',
-        'scrollto',        'async!//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&key=AIzaSyDxEoEo9pRIoAA7Cv92HW32vvIAWPnQewE&signed_in=true'
+        'scrollto',        'async!//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&key=AIzaSyDxEoEo9pRIoAA7Cv92HW32vvIAWPnQewE'
     ],
 
     function($, _, Backbone, responsiveNav, Modernizr, foundation, accordion, scrollTo) {
@@ -178,6 +178,7 @@ define(
                 e.preventDefault();
                 this.collection.updateSelectedModels(null);
                 this.map.renderDefaultMap();
+				this.map.clearSearchField();
 
                 $('#map-canvas').ScrollTo();
 			},
@@ -287,6 +288,10 @@ define(
 				
 				this.render();
             },
+			
+			events: { 
+				'focus #searchTextField': 'searchFieldOnFocus'
+			},
 
 			render: function () {
 				var self = this;
@@ -344,6 +349,8 @@ define(
 			},
 			
             renderSelectedPlace: function() {
+				this.clearSearchField();
+				
                 var selectedModel = this.collection.getSelectedModel();
                 var latlng = new google.maps.LatLng(parseFloat(selectedModel.get('lat')), parseFloat(selectedModel.get('lng')));
 				
@@ -383,7 +390,15 @@ define(
 				});
 				
 				return marker;
-            }
+            },
+			
+			searchFieldOnFocus: function (e) {
+				this.clearSearchField();
+			},
+			
+			clearSearchField: function () {
+				$(this.inputField).val('');
+			}
         });
 
 		
