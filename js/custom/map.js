@@ -210,7 +210,7 @@ define(
 			},
 			
 			menuToggleClick: function (e) {
-				this.$el.find('.accordion-navigation').toggle();
+				this.$el.find('dl').toggle();
 			}
         });
 

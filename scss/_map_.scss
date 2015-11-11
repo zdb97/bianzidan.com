@@ -59,6 +59,10 @@ html#map {
 			font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
 			background:dodgerblue;
 			color: #fff;
+			
+			&:active, &:focus {
+				text-decoration: underline;
+			}
 		}
 	}
 	
