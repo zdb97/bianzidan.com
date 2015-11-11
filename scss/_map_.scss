@@ -38,7 +38,18 @@ html#map {
 				font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
 			}
 		}
-		#toggle-menu {
+	}
+	
+	.region-list {
+		position: absolute;
+		width: 180px;
+		z-index: 10;
+		float: right;
+		right: 5px;
+		top: 76px;
+		
+		#toggle-menu, #back-to-full-map{
+			display: block;
 			text-decoration: none;
 			text-transform: uppercase;
 			margin-bottom: 1px;
@@ -46,24 +57,9 @@ html#map {
 			font-weight: 700;
 			font-size: 0.625rem;
 			font-family: Amble-Light, Cambria, Georgia, Times New Roman, Times, serif;
-			
-			&:before { 
-				content: none;
-			}
-		}
-		#back-to-full-map {
 			background:dodgerblue;
 			color: #fff;
 		}
-	}
-	
-	.region-list {
-		position: absolute;
-		width: 200px;
-		z-index: 10;
-		float: right;
-		right: 0px;
-		top: 76px;
 	}
 	
 	.place-list {
@@ -142,7 +138,10 @@ html#map {
 
 @media only screen and (max-width: 40.063rem) {	// 640px
 	.bodyMap { 
-		.accordion {
+		dl.accordion {
+			margin-left:0;
+			margin-right: 0;
+		
 			dd {
 				padding-left: 0;
 				padding-right: 0;

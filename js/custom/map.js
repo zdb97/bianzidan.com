@@ -172,7 +172,7 @@ define(
                     });
                 });
 
-                self.$el.append(html);
+                self.$el.find('>dl').append(html);
             }, 
 			
 			fullMapClick: function (e) {
