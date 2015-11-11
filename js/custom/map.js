@@ -338,6 +338,11 @@ define(
 						self.map.setCenter(place.geometry.location);
 						self.map.setZoom(17);
 					}
+					/*
+					var marker = new google.maps.Marker({
+						position: {lat: place.geometry.location.lat(), lng: place.geometry.location.lng()},
+						map: self.map
+					});*/
 				});
                 
 				return this;

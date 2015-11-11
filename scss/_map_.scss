@@ -6,17 +6,12 @@ html#map {
 	padding: 5px 0 0;
 	height: 100%;
 
-	.full-width {
-		max-width: 100% !important;
-	}
-	.row {
-		&.main-row {
-			height: 90%;	
-		}
-	}
-	
 	.nav-collapse {
 		z-index: 11;
+	}
+	
+	> #searchTextField {
+		display: none;
 	}
 	
 	.accordion {
