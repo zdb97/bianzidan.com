@@ -102,7 +102,17 @@
           "image": "img/places/port_macquarie.jpg",
           "selected": false,
           "zoom": 13
+        },
+		{
+          "name": "Sunshine Coast",
+          "lat": "-26.6559759",
+          "lng": "153.0918365",
+          "time_of_first_arrival": "2016/01",
+          "image": "",
+          "selected": false,
+          "zoom": 13
         }
+		
       ]
     },
     {
@@ -320,6 +330,24 @@
           "zoom":  13
         }
       ]
-    }
+    },
+	{
+		"name": "thailand",
+		"id": "th",
+		"lat": "15.870032",
+		"lng": "100.99254100000007",
+		"zoom": 7,
+		"places": [
+        {
+          "name": "Bangkok",
+          "lat": "13.7563309",
+          "lng": "100.50176510000006",
+          "time_of_first_arrival": "2016/10",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        }
+      ]	
+	}
   ]
 }
