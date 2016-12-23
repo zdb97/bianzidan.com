@@ -1,0 +1,18 @@
+.bodyPlayers { 
+	font-size: 0.75rem;
+	
+	.even {
+		background-color: #eee;
+	}
+}
+		
+.bodyUpdatePlayer {
+	.updateRow input[type="text"], .updateRow input[type="number"] { 
+		width: 100%; 
+	}
+	.addPlayerForm {
+		input {
+			font-size: 0.625rem; 
+		}
+	}
+}
