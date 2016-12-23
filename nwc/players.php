@@ -7,7 +7,6 @@
 <meta name="description" content="Norwest Cougars (AKA Dundas United) players" />
 <meta name="author" content="Zidan Bian." />
 <link href="../css/bianzidan.css?v=1.0" rel="stylesheet" type="text/css" /> 
-<link href="../css/foundation5.min.css?v=1.1" rel="stylesheet" type="text/css" /> 
 <script src="../js/lib/require.js"></script> 	
 
 </head>
