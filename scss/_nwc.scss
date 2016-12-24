@@ -1,6 +1,9 @@
 .bodyPlayers { 
 	font-size: 0.875rem;
 	
+	.row {
+		padding: 5px 0;
+	}
 	.even {
 		background-color: #eee;
 	}
@@ -11,8 +14,9 @@
 		width: 100%; 
 	}
 	.addPlayerForm {
-		input {
-			font-size: 0.625rem; 
-		}
 	}
+}
+
+.bodyGameMgmt {
+	font-size: 0.75rem;
 }
