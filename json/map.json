@@ -348,6 +348,96 @@
           "zoom":  13
         }
       ]	
+	},
+	{
+		"name": "germany",
+		"id": "ger",
+		"lat": "51.165691",
+		"lng": "10.451526000000058",
+		"zoom": 7,
+		"places": [
+        {
+          "name": "Düsseldorf",
+          "lat": "51.2277411",
+          "lng": "6.773455600000034",
+          "time_of_first_arrival": "2017/01",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        },
+		{
+          "name": "Berlin",
+          "lat": "52.52000659999999",
+          "lng": "13.404953999999975",
+          "time_of_first_arrival": "2017/01",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        }
+      ]	
+	},
+	{
+		"name": "spain",
+		"id": "esp",
+		"lat": "40.46366700000001",
+		"lng": "-3.7492200000000366",
+		"zoom": 7,
+		"places": [
+        {
+          "name": "Barcelona",
+          "lat": "41.38506389999999",
+          "lng": "2.1734034999999494",
+          "time_of_first_arrival": "2017/01",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        },
+		{
+          "name": "Madrid",
+          "lat": "40.4167754",
+          "lng": "-3.7037901999999576",
+          "time_of_first_arrival": "2017/01",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        }
+      ]	
+	},
+	{
+		"name": "USA",
+		"id": "us",
+		"lat": "37.09024",
+		"lng": "-95.71289100000001",
+		"zoom": 6,
+		"places": [
+        {
+          "name": "New York",
+          "lat": "40.7127837",
+          "lng": "-74.00594130000002",
+          "time_of_first_arrival": "2017/01",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        },
+		{
+          "name": "Boston",
+          "lat": "42.3600825",
+          "lng": "-71.05888010000001",
+          "time_of_first_arrival": "2017/01",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        },
+		{
+          "name": "Los Angeles",
+          "lat": "34.0522342",
+          "lng": "-118.2436849",
+          "time_of_first_arrival": "2017/01",
+          "image": "",
+          "selected": false,
+          "zoom":  13
+        }
+      ]	
 	}
   ]
 }
