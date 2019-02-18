@@ -112,7 +112,7 @@
           "selected": false,
           "zoom": 13
         }
-		
+
       ]
     },
     {
@@ -274,6 +274,15 @@
           "image": "img/places/osaka.jpg",
           "selected": false,
           "zoom":  12
+        },
+        {
+          "name": "Sapporo",
+          "lat": "43.0614489",
+          "lng": "141.354538",
+          "time_of_first_arrival": "2019/01",
+          "image": "",
+          "selected": false,
+          "zoom":  13
         }
       ]
     },
@@ -347,7 +356,7 @@
           "selected": false,
           "zoom":  13
         }
-      ]	
+      ]
 	},
 	{
 		"name": "germany",
@@ -374,7 +383,7 @@
           "selected": false,
           "zoom":  13
         }
-      ]	
+      ]
 	},
 	{
 		"name": "spain",
@@ -401,7 +410,7 @@
           "selected": false,
           "zoom":  13
         }
-      ]	
+      ]
 	},
 	{
 		"name": "USA",
@@ -437,7 +446,25 @@
           "selected": false,
           "zoom":  13
         }
-      ]	
+      ]
+	},
+	{
+		"name": "Indonesia",
+		"id": "in",
+		"lat": "-0.789275",
+		"lng": "113.92132700000002",
+		"zoom": 6,
+		"places": [
+			{
+			  "name": "Bali",
+			  "lat": "-8.4095178",
+			  "lng": "115.18891600000006",
+			  "time_of_first_arrival": "2017/12",
+			  "image": "",
+			  "selected": false,
+			  "zoom":  9
+			}
+		]
 	}
   ]
 }
