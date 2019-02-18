@@ -2,21 +2,29 @@
 <html lang="en" id="map">
 
 	<head>
-		<title>Zidan Bian's map.</title> 
+		<!-- Google Tag Manager -->
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-T472NLX');</script>
+		<!-- End Google Tag Manager -->
+
+		<title>Zidan Bian's Footprint.</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="Zidan Bian's map. 卞紫丹的足迹" />
 		<meta name="description" content="Zidan Bian's online space, blog and everything of me. 卞紫丹" />
 		<meta name="author" content="Zidan Bian. 卞紫丹" />
 
 		<!-- FIXME: foundation css to be loaded from gem / bower -->
-		<link href="css/foundation5.min.css" rel="stylesheet" type="text/css" />	
-		<link href="css/map.css?v=2.0" rel="stylesheet" type="text/css" /> 
-		<script src="js/lib/require.js"></script> 	
+		<link href="css/foundation5.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/map.css?v=2.0" rel="stylesheet" type="text/css" />
+		<script src="js/lib/require.js"></script>
 		<script>
 			//require(['js_min/custom/require-config'], function (config) {
-			require(['js/custom/require-config'], function (config) {	
+			require(['js/custom/require-config'], function (config) {
 				// Load the main app module to start the app
 				// example: https://github.com/requirejs/example-jquery-cdn
 				require(["map"]);
@@ -31,36 +39,40 @@
 	</head>
 
 	<body class="bodyMap">
-		    
+		<!-- Google Tag Manager (noscript) -->
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T472NLX"
+				height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
 		<nav class="nav-collapse" role="navigation">
 		  <ul>
 			<li><a href="/">Home</a></li>
 			<li><a  href="resume.html">Resume</a></li>
-			<li class="active"><a href="map.html">Map</a></li>
+			<li class="active"><a href="map.html">Footprint</a></li>
 			<li><a href="/blog">Blog</a></li>
 		  </ul>
 		</nav>
-		
+
 		<!-- search field -->
 		<input id="searchTextField" type="text" placeholder="Enter a location">
-		
+
 		<div class="row">
 			<!-- region list -->
 			<div class="region-list">
 				<a class="" id="toggle-menu">Show/Hide list</a>
 				<a class="" id="back-to-full-map">View full map</a>
-				
+
 				<dl class="accordion row" data-accordion>
 					<!-- backbone template -->
 				</dl>
 			</div>
-			 
+
 			<!-- map canvas -->
 			<div id="map-canvas" class="map-canvas columns">
 				<div class="wheel"></div>
-			</div> 
+			</div>
 		</div>
-		
+
 
 		<script type="text/html" id="region-template">
 			<dd class="accordion-navigation columns region" data-region="<%= region_id %>">
@@ -71,15 +83,15 @@
 					</ul>
 				</div>
 			</dd>
-		</script> 
+		</script>
 
 		<script type="text/html" id="place-template">
 			<li class="columns place">
 				<a title="<%= time_of_first_arrival %>" class="city map-link" index=<%=index %>><%= name %></a>
 			</li>
-		</script> 
-			
-		<!-- google analytics -->	
+		</script>
+
+		<!-- google analytics -->
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -87,9 +99,11 @@
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 		  ga('create', 'UA-41233908-1', 'bianzidan.com');
-		  ga('send', 'pageview');
-		</script> 
+		  ga('send', {
+  			'hitType': 'pageview',
+  			'page': '/map.html'
+			});
+		</script>
 
 	</body>
-</html>	
-	
+</html>

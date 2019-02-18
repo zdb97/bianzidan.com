@@ -2,14 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-T472NLX');</script>
+<!-- End Google Tag Manager -->
+
 <title>Zidan Bian's home online.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="keywords" content="Zidan Bian. 卞紫丹 主页" />
 <meta name="description" content="Zidan Bian's online space, blog and everything of me. 卞紫丹的主页" />
 <meta name="author" content="Zidan Bian. 卞紫丹" />
-<link href="css/bianzidan.css?v=1.0" rel="stylesheet" type="text/css" /> 
-<script src="js/lib/require.js"></script> 	
+<link href="css/bianzidan.css?v=1.0" rel="stylesheet" type="text/css" />
+<script src="js/lib/require.js"></script>
 <script>
 	require(['js/custom/require-config'], function (config) {
 		require(["index"]);
@@ -17,12 +25,17 @@
 </script>
 </head>
 
-<body class="bodyHome" > 
+<body class="bodyHome" >
+	<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T472NLX"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 	<nav class="nav-collapse" role="navigation">
       <ul>
         <li class="active"><a href="/">Home</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="map.html">Map</a></li>
+        <li><a href="map.html">Footprint</a></li>
         <li><a href="/blog">Blog</a></li>
       </ul>
     </nav>
@@ -32,12 +45,12 @@
 			Zidan Bian's homepage, coming soon.
 		</h1>
 	</main>
-	 
+
 	<div role="contentinfo" style="text-indent:-99999px; position: absolute; bottom:-10px; right: -10px;">
 		Zidan Bian. 卞紫丹 @ 16JUN13
-	</div> 
+	</div>
 
-<!-- google analytics -->	
+<!-- google analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -45,7 +58,10 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-41233908-1', 'bianzidan.com');
-  ga('send', 'pageview');
-</script> 
+  ga('send', {
+  		'hitType': 'pageview',
+  		'page': '/index.html'
+		});
+</script>
 </body>
 </html>
