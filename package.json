@@ -18,10 +18,12 @@
   "gitHead": "cf09ac2e49367ccafe1748eda5d24fdf859c9a1e",
   "readmeFilename": "README.md",
   "devDependencies": {
+    "analytics": "0.0.21",
+    "analytics-plugin-ga": "0.0.19",
     "grunt": "~0.4.4",
-    "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-compass": "~0.7.2",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-uglify": "^0.4.0"
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "~0.6.1"
   }
 }
